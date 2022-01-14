@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/paybepe/static/css/main.22e96c1c.css",
-    "main.js": "/paybepe/static/js/main.e794e3e6.js",
+    "main.js": "/paybepe/static/js/main.f9a7af3a.js",
     "static/media/video.mp4": "/paybepe/static/media/video.d28831bc5d9eeb4a9a44.mp4",
     "static/media/svg-4.svg": "/paybepe/static/media/svg-4.94bbedbe2c4541f0be739ced19f4f169.svg",
     "static/media/svg-6.svg": "/paybepe/static/media/svg-6.1a32d36c4ad04a428b0dff1a49797260.svg",
@@ -12,10 +12,10 @@
     "static/media/logo.svg": "/paybepe/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/paybepe/index.html",
     "main.22e96c1c.css.map": "/paybepe/static/css/main.22e96c1c.css.map",
-    "main.e794e3e6.js.map": "/paybepe/static/js/main.e794e3e6.js.map"
+    "main.f9a7af3a.js.map": "/paybepe/static/js/main.f9a7af3a.js.map"
   },
   "entrypoints": [
     "static/css/main.22e96c1c.css",
-    "static/js/main.e794e3e6.js"
+    "static/js/main.f9a7af3a.js"
   ]
 }
