@@ -34,8 +34,8 @@ const Sidebar = (props) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about" onClick={props.toggle}>
-            About
+          <SidebarLink to="intro" onClick={props.toggle}>
+            Intro
           </SidebarLink>
           <SidebarLink to="projects" onClick={props.toggle}>
             Projects

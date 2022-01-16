@@ -1,15 +1,18 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import ProfilePicture from "../../images/fayaad.jpg";
-import Styles from "../../App.css";
 
 const useStyles = createUseStyles({
   introContainer: {
-    paddingTop: 80,
+    padding: "80px 0",
     background: "#191919",
     minHeight: "fit-content",
     display: "flex",
     justifyContent: "center",
+
+    "@media only screen and (max-width: 425px)": {
+      padding: "80px 0 0 0",
+    },
   },
   introWrapper: {
     display: "flex",
@@ -39,7 +42,6 @@ const useStyles = createUseStyles({
     },
   },
   heading: {
-    fontFamily: "Inter",
     fontSize: 52,
     fontWeight: 700,
     backgroundColor: "#F98D36",
@@ -57,7 +59,6 @@ const useStyles = createUseStyles({
   },
   subheading: {
     color: "#BDBDBD",
-    fontFamily: "Inter",
     fontSize: 18,
   },
   imageWrapper: {
@@ -75,7 +76,7 @@ const IntroSection = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.introContainer}>
+    <div className={classes.introContainer} id="intro">
       <div className={classes.introWrapper}>
         <div className={classes.textWrapper}>
           <h1 className={classes.heading}>
@@ -83,10 +84,10 @@ const IntroSection = () => {
             I'm Fayaad, <br />
             A Website Enthusiast. <br />
           </h1>
-          <h2 className={classes.subheading}>
+          <p className={classes.subheading}>
             I love playing online games 🎮, watch netflix 🎥, and traveling too
             🏖 !
-          </h2>
+          </p>
         </div>
         <div className={classes.imageWrapper}>
           <img

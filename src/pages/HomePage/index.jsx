@@ -9,6 +9,7 @@ import {
 } from "../../components/InfoSection/Data";
 import IntroSection from "../../components/IntroSection";
 import Navbar from "../../components/Navbar";
+import ProjectSection from "../../components/ProjectSection";
 import Services from "../../components/Services";
 import Sidebar from "../../components/Sidebar";
 
@@ -24,9 +25,10 @@ const Home = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <IntroSection />
-      <HeroSection />
-      <InfoSection {...homeObjOne} />
-      <InfoSection {...homeObjTwo} />
+      <ProjectSection />
+      {/* <HeroSection /> */}
+      {/* <InfoSection {...homeObjOne} /> */}
+      {/* <InfoSection {...homeObjTwo} /> */}
       <Services />
       <InfoSection {...homeObjThree} />
       <Footer />

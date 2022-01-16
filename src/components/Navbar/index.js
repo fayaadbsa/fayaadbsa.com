@@ -67,14 +67,14 @@ const Navbar = (props) => {
           <NavMenu>
             <NavItem>
               <NavLinks
-                to="about"
+                to="intro"
                 smooth={true}
                 duration={500}
                 spy={true}
                 exact="true"
                 offset={-80}
               >
-                About
+                Intro
               </NavLinks>
             </NavItem>
             <NavItem>
