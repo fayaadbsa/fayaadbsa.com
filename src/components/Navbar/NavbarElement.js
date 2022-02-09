@@ -78,10 +78,10 @@ export const NavLinks = styled(LinkS)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  border-bottom: 3px solid transparent;
 
   &.active {
-    /* color: yellow; */
-    border-bottom: 3px solid #01bf71;
+    border-bottom: 3px solid #f98d36;
   }
 `;
 
@@ -95,10 +95,10 @@ export const NavBtn = styled.nav`
 `;
 export const NavBtnLink = styled(LinkR)`
   border-radius: 50px;
-  background: #01bf71;
+  background: #f98d36;
   white-space: nowrap;
   padding: 10px 22px;
-  color: #010606;
+  color: #000;
   font-size: 16px;
   outline: none;
   border: none;
@@ -106,9 +106,14 @@ export const NavBtnLink = styled(LinkR)`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
 
+  transition: all 0.2s ease-in-out;
+  background-color: #f98d36;
+  background-image: linear-gradient(45deg, #f98d36, #fbe10f, #f98d36);
+  background-size: 300% 100%;
+  background-repeat: repeat;
+
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
+    background-position: 100% 0%;
   }
 `;

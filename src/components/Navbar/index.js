@@ -3,6 +3,7 @@ import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import { createUseStyles } from "react-jss";
 import { animateScroll as scroll } from "react-scroll";
+import { Button } from "../ButtonElements";
 import {
   MobileIcon,
   Nav,
@@ -14,6 +15,7 @@ import {
   NavLogo,
   NavMenu,
 } from "./NavbarElement";
+import { Link as LinkR } from "react-router-dom";
 
 const useStyles = createUseStyles({
   gradientColor: {
@@ -115,7 +117,9 @@ const Navbar = (props) => {
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="/signin">Sign In</NavBtnLink>
+            <LinkR to="/signin">
+              <Button>Sign In</Button>
+            </LinkR>
           </NavBtn>
         </NavbarContainer>
       </Nav>

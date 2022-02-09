@@ -22,12 +22,11 @@ import { Link } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Navigation } from "swiper";
+import SwiperCore, { Navigation, Pagination } from "swiper";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-SwiperCore.use([Pagination]);
 SwiperCore.use([Navigation]);
 
 const useStyles = createUseStyles({
@@ -47,8 +46,9 @@ const useStyles = createUseStyles({
     alignItems: "center",
     justifyContent: "space-between",
     flexDirection: "column",
-    width: 1200,
-    padding: "50px 40px",
+    maxWidth: 1200,
+    padding: "50px 20px",
+    margin: 30,
 
     background: "#212121",
     borderRadius: 40,
@@ -60,12 +60,17 @@ const useStyles = createUseStyles({
       borderRadius: 20,
     },
   },
-  projectHeader: {
+  projectRow: {
     display: "flex",
     marginBottom: 40,
+
+    "@media screen and (max-width: 768px)": {
+      flexDirection: "column-reverse",
+    },
   },
-  swiperWrapper: {
+  swiperRow: {
     display: "flex",
+    justifyContent: "space-between",
     width: "100%",
   },
   heading: {
@@ -96,34 +101,27 @@ const useStyles = createUseStyles({
       fontSize: 14,
     },
   },
-
-  swiper: {
-    display: "flex",
-    flex: "1",
+  swiperWrapper: {
+    width: "942px",
+    height: "100%",
     margin: "0px 20px",
+
+    "@media screen and (max-width: 1154px)": {
+      width: "628px",
+    },
+    "@media screen and (max-width: 850px)": {
+      width: "250px",
+    },
   },
   swiperCard: {
     color: "#fff",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "flex-start",
     alignItems: "center",
-    // borderRadius: 10,
-    // background: "#fff",
-
-    maxHeight: 340,
-    // padding: 30,
-    // boxShadow: "0 1px 3px rgba(0, 0, 0, 0.2)",
-    // transition: "all 0.2s ease-in-out",
-
-    "&:hover": {
-      // transform: "scale(1.02)",
-      // transition: "all 0.2s ease-in-out",
-      // cursor: "pointer",
-    },
+    width: "fit-content",
   },
   swiperImage: {
-    width: "100%",
+    width: "300px",
     marginBottom: 16,
   },
   swiperCardTitle: {
@@ -154,32 +152,12 @@ const useStyles = createUseStyles({
     backgroundImage: "linear-gradient(45deg, #F98D36, #FBE10F)",
     backgroundSize: "100%",
     backgroundRepeat: "repeat",
-  },
-  nextNav: { right: 0 },
-  button: {
-    borderRadius: 50,
-    whiteSpace: "nowrap",
-    padding: "12px 30px",
-    color: "#000",
-    fontSize: "18px",
-    outline: "none",
-    border: "none",
-    cursor: "pointer",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    transition: "all 0.2s ease-in-out",
 
-    backgroundColor: "#F98D36",
-    backgroundImage: "linear-gradient(45deg, #F98D36, #FBE10F, #F98D36)",
-    backgroundSize: "300% 100%",
-    backgroundRepeat: "repeat",
-
-    "&:hover": {
-      transition: "all 0.2s ease-in-out",
-      backgroundPosition: "100% 0%",
+    "@media screen and (max-width: 500px)": {
+      display: "none",
     },
   },
+  nextNav: { right: 0 },
 });
 
 const ProjectSection = () => {
@@ -188,7 +166,7 @@ const ProjectSection = () => {
   return (
     <div className={classes.projectContainer} id="projects">
       <div className={classes.projectWrapper}>
-        <div className={classes.projectHeader}>
+        <div className={classes.projectRow}>
           <Column1>
             <TextWrapper>
               <h2 className={classes.heading}>
@@ -208,9 +186,8 @@ const ProjectSection = () => {
                   spy={true}
                   exact="true"
                   offset={-80}
-                  className={classes.button}
                 >
-                  See More
+                  <Button large>See More</Button>
                 </LinkS>
               </BtnWrap>
             </TextWrapper>
@@ -221,20 +198,20 @@ const ProjectSection = () => {
             </ImgWrap>
           </Column2>
         </div>
-        <div className={classes.swiperWrapper}>
+        <div className={classes.swiperRow}>
           <div className={`${classes.customNav} prevNav`}>
             <FaChevronLeft size={18} />
           </div>
-
           <Swiper
-            className={classes.swiper}
-            slidesPerView={3}
-            spaceBetween={30}
-            loop
+            slidesPerView={"auto"}
+            spaceBetween={16}
             navigation={{
               nextEl: ".nextNav",
               prevEl: ".prevNav",
             }}
+            // pagination={true}
+            // modules={[Pagination]}
+            className={classes.swiperWrapper}
           >
             {ProjectList.map((pr) => {
               return (
