@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ExperienceSection from "../../sections/ExperienceSection";
 import Footer from "../../components/Footer";
 import HeroSection from "../../components/HeroSection";
 import InfoSection from "../../components/InfoSection";
@@ -7,9 +8,9 @@ import {
   homeObjThree,
   homeObjTwo,
 } from "../../components/InfoSection/Data";
-import IntroSection from "../../components/IntroSection";
+import IntroSection from "../../sections/IntroSection";
 import Navbar from "../../components/Navbar";
-import ProjectSection from "../../components/ProjectSection";
+import ProjectSection from "../../sections/ProjectSection";
 import Services from "../../components/Services";
 import Sidebar from "../../components/Sidebar";
 
@@ -26,6 +27,7 @@ const Home = () => {
       <Navbar toggle={toggle} />
       <IntroSection />
       <ProjectSection />
+      <ExperienceSection />
       {/* <HeroSection /> */}
       {/* <InfoSection {...homeObjOne} /> */}
       {/* <InfoSection {...homeObjTwo} /> */}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../ButtonElements";
+import { Button } from "../../components/ButtonElements";
 import {
   BtnWrap,
   Column1,
@@ -27,6 +27,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import ContentHeader from "../../components/ContentHeader";
 SwiperCore.use([Navigation]);
 
 const useStyles = createUseStyles({
@@ -46,7 +47,7 @@ const useStyles = createUseStyles({
     alignItems: "center",
     justifyContent: "space-between",
     flexDirection: "column",
-    maxWidth: 1200,
+    width: 1200,
     padding: "50px 20px",
     margin: 30,
 
@@ -60,46 +61,10 @@ const useStyles = createUseStyles({
       borderRadius: 20,
     },
   },
-  projectRow: {
-    display: "flex",
-    marginBottom: 40,
-
-    "@media screen and (max-width: 768px)": {
-      flexDirection: "column-reverse",
-    },
-  },
   swiperRow: {
     display: "flex",
     justifyContent: "space-between",
     width: "100%",
-  },
-  heading: {
-    fontSize: 36,
-    backgroundColor: "#F98D36",
-    backgroundImage: "linear-gradient(45deg, #F98D36, #FBE10F)",
-    backgroundSize: "100%",
-    backgroundRepeat: "repeat",
-    "-webkit-background-clip": "text",
-    "-webkit-text-fill-color": "transparent",
-    "-moz-background-clip": "text",
-    "-moz-text-fill-color": "transparent",
-
-    "@media screen and (max-width: 425px)": {
-      fontSize: 32,
-    },
-  },
-  headingIcon: {
-    "-webkit-text-fill-color": "black",
-    "-moz-text-fill-color": "black",
-  },
-  subheading: {
-    color: "#fff",
-    fontSize: 18,
-    margin: "16px 0",
-
-    "@media screen and (max-width: 425px)": {
-      fontSize: 14,
-    },
   },
   swiperWrapper: {
     width: "942px",
@@ -166,38 +131,7 @@ const ProjectSection = () => {
   return (
     <div className={classes.projectContainer} id="projects">
       <div className={classes.projectWrapper}>
-        <div className={classes.projectRow}>
-          <Column1>
-            <TextWrapper>
-              <h2 className={classes.heading}>
-                Past <b>Projects</b>{" "}
-                <span className={classes.headingIcon}> 👨‍💻</span>
-              </h2>
-              <p className={classes.subheading}>
-                These are projects that I've made or contributed of. Some of
-                them are from college assignments and others are from my
-                personal works.
-              </p>
-              <BtnWrap>
-                <LinkS
-                  to="home"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  <Button large>See More</Button>
-                </LinkS>
-              </BtnWrap>
-            </TextWrapper>
-          </Column1>
-          <Column2>
-            <ImgWrap>
-              <Img src={ProjectsIcon} alt="projects" />
-            </ImgWrap>
-          </Column2>
-        </div>
+        <ContentHeader type="project" />
         <div className={classes.swiperRow}>
           <div className={`${classes.customNav} prevNav`}>
             <FaChevronLeft size={18} />
