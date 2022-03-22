@@ -91,7 +91,7 @@ const Navbar = (props) => {
                 Projects
               </NavLinks>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLinks
                 to="services"
                 smooth={true}
@@ -114,13 +114,13 @@ const Navbar = (props) => {
               >
                 Contact
               </NavLinks>
-            </NavItem>
+            </NavItem> */}
           </NavMenu>
-          <NavBtn>
+          {/* <NavBtn>
             <LinkR to="/signin">
               <Button>Sign In</Button>
             </LinkR>
-          </NavBtn>
+          </NavBtn> */}
         </NavbarContainer>
       </Nav>
       {/* </IconContext.Provider> */}

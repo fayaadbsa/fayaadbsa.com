@@ -28,6 +28,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import ContentHeader from "../../components/ContentHeader";
+import ProjectCard from "./ProjectCard";
 SwiperCore.use([Navigation]);
 
 const useStyles = createUseStyles({
@@ -131,46 +132,36 @@ const ProjectSection = () => {
   return (
     <div className={classes.projectContainer} id="projects">
       <div className={classes.projectWrapper}>
-        <ContentHeader type="project" />
-        <div className={classes.swiperRow}>
-          <div className={`${classes.customNav} prevNav`}>
-            <FaChevronLeft size={18} />
-          </div>
-          <Swiper
-            slidesPerView={"auto"}
-            spaceBetween={16}
-            navigation={{
-              nextEl: ".nextNav",
-              prevEl: ".prevNav",
-            }}
-            // pagination={true}
-            // modules={[Pagination]}
-            className={classes.swiperWrapper}
-          >
-            {ProjectList.map((pr) => {
-              return (
-                <SwiperSlide className={classes.swiperCard}>
-                  <img
-                    src={pr.img}
-                    alt="card"
-                    className={classes.swiperImage}
-                  />
-                  <h2 className={classes.swiperCardTitle}>{pr.title}</h2>
-                  <a
-                    href={pr.urls}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={classes.swiperCardSubtitle}
-                  >
-                    {pr.subtitle}
-                  </a>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-          <div className={`${classes.customNav} ${classes.nextNav} nextNav`}>
-            <FaChevronRight size={18} />
-          </div>
+        <ContentHeader type="project"  />
+        <div className="flex flex-wrap justify-around">
+          {ProjectList.map((project) => {
+            return (
+              <div className="basis-full p-3 sm:basis-1/2 md:basis-1/3 ">
+                <a
+                  className="text-custom-orange text-base"
+                  href={project.websiteUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className="max-w rounded-lg shadow-xl overflow-hidden bg-custom-gray 
+                  transition ease-out  hover:scale-105 duration-100">
+                    <img
+                      className="w-full"
+                      src={project.img}
+                      alt={project.alt}
+                    />
+
+                    <div className="px-6 py-4 text-center">
+                      <div className="text-white font-bold text-xl mb-2">
+                        {project.title}
+                      </div>
+                      <p> {project.subtitle}</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

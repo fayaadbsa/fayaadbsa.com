@@ -7,7 +7,7 @@ import { EXPERIENCE_CONTENT, PROJECT_CONTENT } from "./ContentData";
 const useStyles = createUseStyles({
   contentRow: {
     display: "flex",
-    marginBottom: 40,
+    // marginBottom: 40,
     flexDirection: (props) => (props.imgStart ? "row-reverse" : "row"),
 
     "@media screen and (max-width: 768px)": {
@@ -45,7 +45,7 @@ const useStyles = createUseStyles({
   column1: {
     alignSelf: "start",
     marginBottom: "16px",
-    padding: "0 32px",
+    padding: "0 12px",
     gridArea: "col1",
   },
   column2: {
@@ -54,9 +54,9 @@ const useStyles = createUseStyles({
     gridArea: "col2",
   },
   textWrapper: {
-    maxWidth: "540px",
+    maxWidth: "60%",
     paddingTop: "0",
-    paddingBottom: "60px",
+    // paddingBottom: "60px",
   },
   btnWrap: {
     display: "flex",
@@ -83,7 +83,7 @@ const ContentHeader = (props) => {
   const classes = useStyles(content);
 
   return (
-    <div className={classes.contentRow}>
+    <div className={`${classes.contentRow} w-full`}>
       <div className={classes.column1}>
         <div className={classes.textWrapper}>
           <h2 className={classes.heading}>
@@ -91,7 +91,7 @@ const ContentHeader = (props) => {
             <span className={classes.headingIcon}>{content.headingIcon}</span>
           </h2>
           <p className={classes.subheading}>{content.subheading}</p>
-          {content.hasButton ? (
+          {content.hasButton && (
             <div className={classes.btnWrap}>
               <LinkS
                 to="home"
@@ -104,15 +104,15 @@ const ContentHeader = (props) => {
                 <Button large>See More</Button>
               </LinkS>
             </div>
-          ) : (
-            ""
           )}
         </div>
       </div>
       <div className={classes.column2}>
-        <div className={classes.imgWrap}>
-          <img className={classes.img} src={content.image} alt="icon" />
-        </div>
+        {content.hasImage && (
+          <div className={classes.imgWrap}>
+            <img className={classes.img} src={content.image} alt="icon" />
+          </div>
+        )}
       </div>
     </div>
   );

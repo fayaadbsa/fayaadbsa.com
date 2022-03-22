@@ -12,7 +12,8 @@ export const PROJECT_CONTENT = {
     "These are projects that I've made or contributed of. Some of them are from college assignments and others are from my personal works.",
   image: ProjectsIcon,
   imgStart: false,
-  hasButton: true,
+  hasButton: false,
+  hasImage: false,
 };
 
 export const EXPERIENCE_CONTENT = {
@@ -25,5 +26,6 @@ export const EXPERIENCE_CONTENT = {
   subheading: "My work experience as part time worker, intern and volunteer. ",
   image: ExperienceIcon,
   imgStart: true,
-  hasButton: false,
+  hasButton: true,
+  hasImage: true,
 };

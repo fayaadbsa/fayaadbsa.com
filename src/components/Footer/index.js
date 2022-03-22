@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterWrap>
-        <FooterLinksContainer>
+        {/* <FooterLinksContainer>
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>About Us</FooterLinkTitle>
@@ -54,21 +54,21 @@ const Footer = () => {
               <FooterLink to="/">Twitter</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
-        </FooterLinksContainer>
+        </FooterLinksContainer> */}
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to="/">icon</SocialLogo>
+            <SocialLogo to="/"></SocialLogo>
             <WebsiteRights>
               fayaadbsa © {new Date().getFullYear()} All rights reserved.
             </WebsiteRights>
             <SocialIcons>
-              <SocialIconLink href="/" target="_blank" aria-label="LinkedIn">
+              <SocialIconLink href="https://www.instagram.com/fayaadbsa/" target="_blank" aria-label="LinkedIn">
                 <FaLinkedin />
               </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" aria-label="Instagram">
+              <SocialIconLink href="https://www.linkedin.com/in/fayaadbsa/" target="_blank" aria-label="Instagram">
                 <FaInstagram />
               </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" aria-label="Youtube">
+              <SocialIconLink href="https://www.youtube.com/c/MuhammadFayaadBSA" target="_blank" aria-label="Youtube">
                 <FaYoutube />
               </SocialIconLink>
             </SocialIcons>
