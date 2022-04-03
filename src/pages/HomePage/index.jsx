@@ -13,6 +13,7 @@ import Navbar from "../../components/Navbar";
 import ProjectSection from "../../sections/ProjectSection";
 import Services from "../../components/Services";
 import Sidebar from "../../components/Sidebar";
+import BlogSection from "../../sections/BlogSection/BlogSection";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,6 +28,7 @@ const Home = () => {
       <Navbar toggle={toggle} />
       <IntroSection />
       <ProjectSection />
+      <BlogSection />
       {/* <ExperienceSection /> */}
       {/* <HeroSection /> */}
       {/* <InfoSection {...homeObjOne} /> */}

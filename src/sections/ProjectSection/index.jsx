@@ -32,26 +32,12 @@ import ProjectCard from "./ProjectCard";
 SwiperCore.use([Navigation]);
 
 const useStyles = createUseStyles({
-  projectContainer: {
-    color: "#fff",
-    background: "#191919",
-    minHeight: "fit-content",
-    display: "flex",
-    justifyContent: "center",
-
-    "@media screen and (max-width: 768px)": {
-      padding: "100px 0",
-    },
-  },
   projectWrapper: {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
     flexDirection: "column",
     width: 1200,
-    padding: "50px 20px",
-    margin: 30,
-
     background: "#212121",
     borderRadius: 40,
     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
@@ -130,8 +116,8 @@ const ProjectSection = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.projectContainer} id="projects">
-      <div className={classes.projectWrapper}>
+    <div className="flex justify-center my-12" id="projects">
+      <div className={`${classes.projectWrapper} py-12 px-5 mx-7`}>
         <ContentHeader type="project"  />
         <div className="flex flex-wrap justify-around">
           {ProjectList.map((project) => {

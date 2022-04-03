@@ -63,10 +63,10 @@ const Footer = () => {
             </WebsiteRights>
             <SocialIcons>
               <SocialIconLink href="https://www.instagram.com/fayaadbsa/" target="_blank" aria-label="LinkedIn">
-                <FaLinkedin />
+                <FaInstagram />
               </SocialIconLink>
               <SocialIconLink href="https://www.linkedin.com/in/fayaadbsa/" target="_blank" aria-label="Instagram">
-                <FaInstagram />
+                <FaLinkedin />
               </SocialIconLink>
               <SocialIconLink href="https://www.youtube.com/c/MuhammadFayaadBSA" target="_blank" aria-label="Youtube">
                 <FaYoutube />
