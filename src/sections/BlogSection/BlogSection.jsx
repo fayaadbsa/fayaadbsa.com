@@ -4,7 +4,7 @@ import BlogData from "../../data/BlogData";
 
 const BlogSection = () => {
   return (
-    <div className="flex justify-center my-12">
+    <div className="flex justify-center my-12"  id="blogs">
       <div className="flex flex-col mx-7 w-[1200px]">
         <h4 className="text-custom-orange font-light">── My Blogs</h4>
         <h1 className="text-white text-2xl">Some of my blogs</h1>

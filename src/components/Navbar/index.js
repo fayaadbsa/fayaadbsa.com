@@ -91,6 +91,18 @@ const Navbar = (props) => {
                 Projects
               </NavLinks>
             </NavItem>
+            <NavItem>
+              <NavLinks
+                to="blogs"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                Blogs
+              </NavLinks>
+            </NavItem>
             {/* <NavItem>
               <NavLinks
                 to="services"
