@@ -4,14 +4,14 @@ import ProfilePicture from "../../images/fayaad.jpg";
 
 const useStyles = createUseStyles({
   introContainer: {
-    padding: "64px 0",
+    padding: "80px 0",
     background: "#191919",
     minHeight: "fit-content",
     display: "flex",
     justifyContent: "center",
 
     "@media only screen and (max-width: 425px)": {
-      padding: "64px 0 0 0",
+      padding: "80px 0 0 0",
     },
   },
   introWrapper: {

@@ -18,18 +18,18 @@ import BlogSection from "../../sections/BlogSection/BlogSection";
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => {
+  const handleToggle = () => {
     setIsOpen(!isOpen);
   };
 
   return (
     <>
-      <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
+      <Navbar handleToggle={handleToggle} />
+      <Sidebar isOpen={isOpen} toggle={handleToggle} />
       <IntroSection />
       <ProjectSection />
       <BlogSection />
-      {/* <ExperienceSection /> */}
+      <ExperienceSection />
       {/* <HeroSection /> */}
       {/* <InfoSection {...homeObjOne} /> */}
       {/* <InfoSection {...homeObjTwo} /> */}
