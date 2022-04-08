@@ -27,31 +27,33 @@ const useStyles = createUseStyles({
 const Sidebar = (props) => {
   const classes = useStyles();
 
+  const { handleSidebar, isOpen } = props;
+
   return (
-    <SidebarContainer isOpen={props.isOpen} onClick={props.toggle}>
-      <Icon onClick={props.toggle}>
+    <SidebarContainer isOpen={isOpen} onClick={handleSidebar}>
+      <Icon onClick={handleSidebar}>
         <CloseIcon />
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="intro" onClick={props.toggle}>
+          <SidebarLink to="intro" onClick={handleSidebar}>
             Intro
           </SidebarLink>
-          <SidebarLink to="projects" onClick={props.toggle}>
+          <SidebarLink to="projects" onClick={handleSidebar}>
             Projects
           </SidebarLink>
-          <SidebarLink to="services" onClick={props.toggle}>
+          <SidebarLink to="services" onClick={handleSidebar}>
             Services
           </SidebarLink>
-          <SidebarLink to="contact" onClick={props.toggle}>
+          <SidebarLink to="contact" onClick={handleSidebar}>
             Contact
           </SidebarLink>
-          <SidebarLink to="signin" onClick={props.toggle}>
+          <SidebarLink to="signin" onClick={handleSidebar}>
             Sign In
           </SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute to="/signin" onClick={props.toggle}>
+          <SidebarRoute to="/signin" onClick={handleSidebar}>
             Sign In
           </SidebarRoute>
         </SideBtnWrap>

@@ -12,21 +12,7 @@ const NAVBAR_ITEMS = [
 ];
 
 const Navbar = (props) => {
-  const { handleToggle } = props;
-
-  const [scrollNav, setScrollNav] = useState(false);
-
-  const changeNav = () => {
-    if (window.scrollY >= 0) {
-      setScrollNav(true);
-    } else {
-      setScrollNav(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", changeNav);
-  }, []);
+  const { handleSidebar } = props;
 
   const toggleHome = () => {
     scroll.scrollToTop();
@@ -60,7 +46,7 @@ const Navbar = (props) => {
           ))}
         </div>
         <div>
-          <MobileBtn handleToggle={handleToggle} />
+          <MobileBtn handleSidebar={handleSidebar} />
         </div>
       </div>
     </nav>
@@ -68,10 +54,10 @@ const Navbar = (props) => {
 };
 
 const MobileBtn = (props) => {
-  const { handleToggle } = props;
+  const { handleSidebar } = props;
 
   return (
-    <div className="cursor-pointer md:hidden" onClick={handleToggle}>
+    <div className="cursor-pointer md:hidden" onClick={handleSidebar}>
       <FaBars size={30} className="text-fx-yellow" />
     </div>
   );
