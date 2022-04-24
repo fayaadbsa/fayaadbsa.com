@@ -20,24 +20,24 @@ const ProjectsSection = () => {
         </span>
       </div>
       {currentProject && (
-        <div className="flex mt-9 h-[324px]">
-          <div className="min-w-[512px] w-[512px] mr-16">
+        <div className="flex items-start flex-col mt-9 lg:flex-row">
+          <div className="flex min-w-full w-full mr-16 sm:min-w-[540px] sm:w-[540px] ">
             <img
-              className="rounded-lg w-full"
+              className="rounded-lg w-full object-contain"
               src={currentProject.img}
               alt={currentProject.alt}
             />
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col mt-6 lg:mt-0">
             <div>
               <p className="inline font-bold text-fx-linear-orange-yellow-aqua text-3xl">
                 {currentProject.title}
               </p>
             </div>
-            <div className="mt-6">
+            <div className="flex flex-wrap mt-6">
               {currentProject.tagIds.map((tagId) => {
                 return (
-                  <p className="inline p-2 text-fx-aqua bg-fx-aqua-dark mr-2 rounded">
+                  <p className="inline p-2 text-fx-aqua bg-fx-aqua-dark mr-2 mb-2 rounded">
                     {tagsData.find((t) => t.id === tagId)?.name}
                   </p>
                 );
@@ -61,31 +61,33 @@ const ProjectsSection = () => {
           </div>
         </div>
       )}
-      <div className="mt-12 flex">
-        {projectsData.slice(0, 5).map((project, index) => {
-          return (
-            <div
-              onClick={() => setCurrentProject(projectsData[index])}
-              className={`text-center rounded-xl cursor-pointer w-56 mr-4 border-4
+      {projectsData && (
+        <div className="hidden mt-12 md:flex">
+          {projectsData.slice(0, 5).map((project, index) => {
+            return (
+              <div
+                onClick={() => setCurrentProject(projectsData[index])}
+                className={`text-center rounded-xl cursor-pointer w-56 mr-4 border-4
                 ${
                   currentProject?.id === project?.id
                     ? "border-fx-orange"
                     : "border-transparent"
                 } `}
-            >
-              <div
-                className="bg-cover bg-top rounded-lg h-full py-6 brightness-50"
-                style={{
-                  backgroundImage: `url(${project.img})`,
-                }}
-              ></div>
-              <p className="relative -top-1/2 -translate-y-1/2 z-10 font-semibold">
-                {project.title}
-              </p>
-            </div>
-          );
-        })}
-      </div>
+              >
+                <div
+                  className="bg-cover bg-top rounded-lg h-full py-6 brightness-50"
+                  style={{
+                    backgroundImage: `url(${project.img})`,
+                  }}
+                ></div>
+                <p className="relative -top-1/2 -translate-y-1/2 z-10 font-semibold">
+                  {project.title}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 };

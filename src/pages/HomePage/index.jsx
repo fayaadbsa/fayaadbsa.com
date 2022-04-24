@@ -24,21 +24,16 @@ const Home = () => {
   };
 
   return (
-    <div className="max-w-8xl mx-auto px-16 xl:px-32">
+    <>
       <Navbar handleSidebar={handleSidebar} />
       <Sidebar isOpen={isOpen} handleSidebar={handleSidebar} />
-      <IntroSection />
-      <ProjectsSection />
-      {/* <ProjectSection /> */}
-      <BlogSection />
-      <ExperienceSection />
-      {/* <HeroSection /> */}
-      {/* <InfoSection {...homeObjOne} /> */}
-      {/* <InfoSection {...homeObjTwo} /> */}
-      {/* <Services /> */}
-      {/* <InfoSection {...homeObjThree} /> */}
-      <Footer />
-    </div>
+      <div className="max-w-8xl mx-auto px-4 md:px-16 xl:px-32">
+        <IntroSection />
+        <ProjectsSection />
+        <BlogSection />
+        <Footer />
+      </div>
+    </>
   );
 };
 

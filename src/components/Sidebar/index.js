@@ -1,32 +1,14 @@
 import React from "react";
-import { createUseStyles } from "react-jss";
 import {
   CloseIcon,
   Icon,
   SidebarContainer,
   SidebarLink,
   SidebarMenu,
-  SidebarRoute,
   SidebarWrapper,
-  SideBtnWrap,
 } from "./SidebarElement";
 
-const useStyles = createUseStyles({
-  gradientColor: {
-    backgroundColor: "#F98D36",
-    backgroundImage: "linear-gradient(45deg, #F98D36, #FBE10F)",
-    backgroundSize: "100%",
-    backgroundRepeat: "repeat",
-    "-webkit-background-clip": "text",
-    "-webkit-text-fill-color": "transparent",
-    "-moz-background-clip": "text",
-    "-moz-text-fill-color": "transparent",
-  },
-});
-
 const Sidebar = (props) => {
-  const classes = useStyles();
-
   const { handleSidebar, isOpen } = props;
 
   return (
@@ -42,21 +24,13 @@ const Sidebar = (props) => {
           <SidebarLink to="projects" onClick={handleSidebar}>
             Projects
           </SidebarLink>
-          <SidebarLink to="services" onClick={handleSidebar}>
-            Services
+          <SidebarLink to="blogs" onClick={handleSidebar}>
+            Blogs
           </SidebarLink>
           <SidebarLink to="contact" onClick={handleSidebar}>
             Contact
           </SidebarLink>
-          <SidebarLink to="signin" onClick={handleSidebar}>
-            Sign In
-          </SidebarLink>
         </SidebarMenu>
-        <SideBtnWrap>
-          <SidebarRoute to="/signin" onClick={handleSidebar}>
-            Sign In
-          </SidebarRoute>
-        </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
   );
