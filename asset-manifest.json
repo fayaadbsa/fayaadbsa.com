@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.6baf11be.css",
-    "main.js": "/static/js/main.45e13af6.js",
+    "main.css": "/static/css/main.e4754f03.css",
+    "main.js": "/static/js/main.0c139f1f.js",
     "static/media/video.mp4": "/static/media/video.d28831bc5d9eeb4a9a44.mp4",
     "static/media/debatehall.png": "/static/media/debatehall.2f2a8afd630db87f3a17.png",
-    "static/media/paypewe.png": "/static/media/paypewe.ac61a6c523a4a26eba47.png",
-    "static/media/fayaad.jpg": "/static/media/fayaad.61b3a5ae748c7fc619a2.jpg",
+    "static/media/fayaad.png": "/static/media/fayaad.77aee2abf682f36f95c9.png",
+    "static/media/paypewe.png": "/static/media/paypewe.5daf5f366aa99c04487c.png",
     "static/media/educovid.png": "/static/media/educovid.07557b6b7a251d28a69d.png",
     "static/media/staco.png": "/static/media/staco.33007e954f3d868222e5.png",
     "static/media/svg-experience.svg": "/static/media/svg-experience.97fe571684142822768d8b3fcce5a114.svg",
@@ -18,11 +18,11 @@
     "static/media/svg-2.svg": "/static/media/svg-2.efb2abc8522da0d9eb951a643560cbde.svg",
     "static/media/svg-5.svg": "/static/media/svg-5.c66a1d8f3b79a341ec4ec7f4a750f77f.svg",
     "index.html": "/index.html",
-    "main.6baf11be.css.map": "/static/css/main.6baf11be.css.map",
-    "main.45e13af6.js.map": "/static/js/main.45e13af6.js.map"
+    "main.e4754f03.css.map": "/static/css/main.e4754f03.css.map",
+    "main.0c139f1f.js.map": "/static/js/main.0c139f1f.js.map"
   },
   "entrypoints": [
-    "static/css/main.6baf11be.css",
-    "static/js/main.45e13af6.js"
+    "static/css/main.e4754f03.css",
+    "static/js/main.0c139f1f.js"
   ]
 }
