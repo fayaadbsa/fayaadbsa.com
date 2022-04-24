@@ -1,18 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { blogsData } from "../../data/BlogsData";
+import { FaRegCalendar } from "react-icons/fa";
+import { BsClockHistory } from "react-icons/bs";
+import Tags from "../../components/Tags/Tags";
+import moment from "moment";
 
 const BlogSection = () => {
   return (
-    <div className="flex justify-center my-12" id="blogs">
-      <div className="flex flex-col mx-7 w-[1200px]">
-        <h4 className="text-custom-orange font-light">── My Blogs</h4>
-        <h1 className="text-white text-2xl">Some of my blogs</h1>
-        <div className="flex mt-4 justify-between gap-4">
-          {blogsData.map((blog) => (
-            <BlogCard blog={blog} />
-          ))}
-        </div>
+    <div className="flex flex-col pb-32" id="projects">
+      <div className="flex items-center">
+        <div className="border-b border-fx-orange w-14 mr-6" />
+        <span className="text-3xl font-light text-fx-linear-orange-yellow">
+          Blogs
+        </span>
+      </div>
+      <div className="flex mt-9 justify-between gap-4 flex-col md:flex-row">
+        {blogsData.map((blog) => (
+          <BlogCard blog={blog} />
+        ))}
       </div>
     </div>
   );
@@ -22,31 +27,44 @@ const BlogCard = (props) => {
   const blog = props.blog;
 
   return (
-    <div
+    <a
       key={blog.id}
-      className=" bg-custom-gray border-2 border-gray-600
-      basis-1/3 p-6 rounded-lg drop-shadow-md
-      transition ease-out hover:scale-[1.01] duration-200"
+      className="flex flex-col fx-card basis-1/3 p-6 mt-6 rounded-lg"
+      href={blog.url}
+      target="_blank"
+      rel="noreferrer"
     >
-      <a
-        href={blog.url}
-        target="_blank"
-        rel="noreferrer"
-        className="flex flex-col h-full"
-      >
-        <h4 className="text-custom-orange font-medium">{blog.title}</h4>
-        <div>
-          {blog.tags.map((tag) => (
-            <Tag tag={tag} />
-          ))}
-        </div>
+      <div className="rounded-lg -mt-12 mb-6 z-10">
         <img
           src={blog.imageUrl}
           alt={blog.imageAlt}
-          className="w-full h-36 object-cover mt-auto"
+          className="rounded-lg w-full h-36 object-cover mt-auto"
         />
-      </a>
-    </div>
+      </div>
+      <p className="text-fx-linear-orange-yellow font-bold">{blog.title}</p>
+      <div className="inline-flex items-center mt-2 text-sm text-fx-white-sec">
+        <FaRegCalendar color="#F2F2F2" className="mr-2" />{" "}
+        <span>{`${moment(blog.dateCreated).format("MMM DD, YYYY")}`}</span>
+        <BsClockHistory className="ml-4 mr-2" />
+        <span>{blog.timeToRead} min read</span>
+      </div>
+      <div className="flex flex-wrap mt-2">
+        <Tags tags={blog.tags} />
+      </div>
+      <p
+        className="text-sm"
+        style={{
+          maxWidth: "100%",
+          display: "-webkit-box",
+          WebkitBoxOrient: "vertical",
+          WebkitLineClamp: 3,
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+        }}
+      >
+        {blog.description}
+      </p>
+    </a>
   );
 };
 

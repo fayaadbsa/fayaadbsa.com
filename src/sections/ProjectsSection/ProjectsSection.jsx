@@ -1,8 +1,8 @@
 import moment from "moment";
 import React, { useEffect, useState } from "react";
 import Button from "../../components/Button/Button";
+import Tags from "../../components/Tags/Tags";
 import { projectsData } from "../../data/ProjectsData";
-import { tagsData } from "../../data/TagsData";
 
 const ProjectsSection = () => {
   const [currentProject, setCurrentProject] = useState(null);
@@ -35,13 +35,7 @@ const ProjectsSection = () => {
               </p>
             </div>
             <div className="flex flex-wrap mt-6">
-              {currentProject.tagIds.map((tagId) => {
-                return (
-                  <p className="inline p-2 text-fx-aqua bg-fx-aqua-dark mr-2 mb-2 rounded">
-                    {tagsData.find((t) => t.id === tagId)?.name}
-                  </p>
-                );
-              })}
+              <Tags tags={currentProject.tagIds} />
             </div>
             <div className="mt-6 font-light text-fx-grey">
               {`${moment(currentProject.startDate).format(

@@ -27,12 +27,14 @@ body {
   background: #191919;
 }
 
-.fx-button {
+.fx-button,
+.fx-card {
   position: relative;
   transition: all 0.2s ease-in-out;
 }
 
-.fx-button::before {
+.fx-button::before,
+.fx-card::before  {
   content: "";
   position: absolute;
   inset: 0;
@@ -49,4 +51,9 @@ body {
 .fx-button:hover {
   box-shadow: 0 0.5em 0.7em -0.4em #FFBB14;
   transform: translateY(-0.1em);
+}
+
+.fx-card:hover {
+  box-shadow: 0 0.7em 0.8em -0.4em #FFBB14;
+  transform: translateY(-0.3em);
 }
