@@ -20,7 +20,7 @@ const Navbar = (props) => {
 
   return (
     <nav className="flex sticky items-center justify-center h-16 top-0 -mt-16 z-10 bg-fx-black">
-      <div className="flex justify-between items-center h-16 w-full max-w-8xl px-16 xl:px-32">
+      <div className="flex justify-between items-center h-16 w-full">
         <LinkRouter
           to="/"
           onClick={toggleHome}
@@ -65,11 +65,8 @@ const MobileBtn = (props) => {
 
 const Logo = () => {
   return (
-    <div
-      className="font-dancing-script text-4.5xl font-bold
-    text-transparent bg-clip-text bg-gradient-to-r 
-    from-fx-orange via-fx-yellow to-fx-aqua"
-    >
+    <div className="font-dancing-script text-4.5xl font-bold 
+      text-fx-linear-orange-yellow-aqua">
       Fx
     </div>
   );

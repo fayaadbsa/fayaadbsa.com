@@ -17,7 +17,7 @@ import {
 import ProjectsIcon from "../../images/svg-projects.svg";
 import { createUseStyles } from "react-jss";
 
-import { ProjectList, projectList } from "./ProjectData";
+import { projectsData } from "../../data/ProjectsData";
 import { Link } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 
@@ -120,7 +120,7 @@ const ProjectSection = () => {
       <div className={`${classes.projectWrapper} py-12 px-5 mx-7`}>
         <ContentHeader type="project"  />
         <div className="flex flex-wrap justify-around">
-          {ProjectList.map((project) => {
+          {projectsData.map((project) => {
             return (
               <div className="basis-full p-3 sm:basis-1/2 md:basis-1/3 ">
                 <a

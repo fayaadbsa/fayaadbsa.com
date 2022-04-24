@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -11,10 +13,11 @@ module.exports = {
         "fx-yellow": "#FFBB14",
         "fx-orange": "#FF8E2B",
         "fx-aqua": "#60D1C0",
+        "fx-aqua-dark": "#1D2E2C",
       },
       fontFamily: {
-        "dancing-script": ["Dancing Script", "sans-serif"],
-        inter: ["Inter", "sans-serif"],
+        "dancing-script": ["Dancing Script", ...defaultTheme.fontFamily.sans],
+        inter: ["Inter", ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
         "4.5xl": [
@@ -25,8 +28,8 @@ module.exports = {
         ],
       },
       maxWidth: {
-        '8xl': '90rem',
-      }
+        "8xl": "90rem",
+      },
     },
   },
   plugins: [],

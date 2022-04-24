@@ -5,7 +5,8 @@ const TAGS = {
   GIT: { id: "4", name: "git" },
 };
 
-const BlogData = [
+
+export const blogsData = [
   {
     id: "1",
     title: "Mari Menggunakan Git Version Control dengan Baik",
@@ -31,5 +32,3 @@ const BlogData = [
     url: "https://fayaadbsa.medium.com/scrum-dalam-software-development-bc3da3ece287",
   },
 ];
-
-export default BlogData;

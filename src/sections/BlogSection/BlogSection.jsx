@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import BlogData from "../../data/BlogData";
+import { blogsData } from "../../data/BlogsData";
 
 const BlogSection = () => {
   return (
-    <div className="flex justify-center my-12"  id="blogs">
+    <div className="flex justify-center my-12" id="blogs">
       <div className="flex flex-col mx-7 w-[1200px]">
         <h4 className="text-custom-orange font-light">── My Blogs</h4>
         <h1 className="text-white text-2xl">Some of my blogs</h1>
         <div className="flex mt-4 justify-between gap-4">
-          {BlogData.map((blog) => (
+          {blogsData.map((blog) => (
             <BlogCard blog={blog} />
           ))}
         </div>

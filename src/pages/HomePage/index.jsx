@@ -14,6 +14,7 @@ import ProjectSection from "../../sections/ProjectSection";
 import Services from "../../components/Services";
 import Sidebar from "../../components/Sidebar";
 import BlogSection from "../../sections/BlogSection/BlogSection";
+import ProjectsSection from "../../sections/ProjectsSection/ProjectsSection";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,11 +24,12 @@ const Home = () => {
   };
 
   return (
-    <>
+    <div className="max-w-8xl mx-auto px-16 xl:px-32">
       <Navbar handleSidebar={handleSidebar} />
       <Sidebar isOpen={isOpen} handleSidebar={handleSidebar} />
       <IntroSection />
-      <ProjectSection />
+      <ProjectsSection />
+      {/* <ProjectSection /> */}
       <BlogSection />
       <ExperienceSection />
       {/* <HeroSection /> */}
@@ -36,7 +38,7 @@ const Home = () => {
       {/* <Services /> */}
       {/* <InfoSection {...homeObjThree} /> */}
       <Footer />
-    </>
+    </div>
   );
 };
 
