@@ -7,4 +7,8 @@ export const tagsData = [
   { id: "6", name: "jQuery" },
   { id: "7", name: "HTML" },
   { id: "8", name: "Bootstrap" },
+  { id: "9", name: "PostgeSQL" },
+  { id: "10", name: "TDD" },
+  { id: "11", name: "Spring Boot" },
+  { id: "12", name: "Ajax" },
 ];

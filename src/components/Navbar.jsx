@@ -19,35 +19,33 @@ const Navbar = (props) => {
   };
 
   return (
-    <nav className="flex sticky items-center justify-center h-16 top-0 -mt-16 z-10 bg-fx-black">
-      <div className="flex justify-between items-center h-16 w-full">
-        <LinkRouter
-          to="/"
-          onClick={toggleHome}
-          className="flex items-center justify-self-start cursor-pointer"
-        >
-          <Logo />
-        </LinkRouter>
-        <div className="hidden md:flex md:items-center md:text-center md:list-none">
-          {NAVBAR_ITEMS.map((item) => (
-            <LinkScroll
-              to={item.to}
-              smooth={true}
-              duration={800}
-              spy={true}
-              exact="true"
-              offset={-80}
-              activeClass="!text-fx-yellow"
-              className="flex items-center h-full cursor-pointer 
+    <nav className="flex sticky items-center justify-between h-16 top-0 -mt-16 z-10 bg-fx-black">
+      <LinkRouter
+        to="/"
+        onClick={toggleHome}
+        className="flex items-center justify-self-start cursor-pointer"
+      >
+        <Logo />
+      </LinkRouter>
+      <div className="hidden md:flex md:items-center md:text-center md:list-none">
+        {NAVBAR_ITEMS.map((item) => (
+          <LinkScroll
+            to={item.to}
+            smooth={true}
+            duration={800}
+            spy={true}
+            exact="true"
+            offset={-80}
+            activeClass="!text-fx-yellow"
+            className="flex items-center h-full cursor-pointer 
                 text-white tracking-wider px-6"
-            >
-              {item.label}
-            </LinkScroll>
-          ))}
-        </div>
-        <div>
-          <MobileBtn handleSidebar={handleSidebar} />
-        </div>
+          >
+            {item.label}
+          </LinkScroll>
+        ))}
+      </div>
+      <div>
+        <MobileBtn handleSidebar={handleSidebar} />
       </div>
     </nav>
   );
@@ -65,8 +63,10 @@ const MobileBtn = (props) => {
 
 const Logo = () => {
   return (
-    <div className="font-dancing-script text-4.5xl font-bold 
-      text-fx-linear-orange-yellow-aqua">
+    <div
+      className="font-dancing-script text-4.5xl font-bold 
+      text-fx-linear-orange-yellow-aqua"
+    >
       Fx
     </div>
   );

@@ -5,7 +5,7 @@ import Button from "../../components/Button/Button";
 const IntroSection = () => {
   return (
     <div
-      className="flex items-center justify-between mt-36 mb-16"
+      className="flex items-center justify-between py-32"
       id="intro"
     >
       <div className="w-[410px]">

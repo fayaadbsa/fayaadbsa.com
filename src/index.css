@@ -27,11 +27,12 @@ body {
   background: #191919;
 }
 
-.button {
+.fx-button {
   position: relative;
+  transition: all 0.2s ease-in-out;
 }
 
-.button::before {
+.fx-button::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -43,4 +44,9 @@ body {
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
+}
+
+.fx-button:hover {
+  box-shadow: 0 0.5em 0.7em -0.4em #FFBB14;
+  transform: translateY(-0.1em);
 }
