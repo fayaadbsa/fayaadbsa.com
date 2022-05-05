@@ -1,1 +1,1 @@
-# [WIP] Fayaad's Personal Portfolio 🥳
+# Fayaad's Personal Portfolio 🥳
