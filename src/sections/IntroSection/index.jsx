@@ -25,9 +25,14 @@ const IntroSection = () => {
           I also love to play online games 🎮, watch movies 🎥, and travel ⛰
         </div>
         <div className="mt-16">
-          <a href="https://ristek.link/Muhammad_Fayaad_CV" target="_blank" rel="noreferrer">
-            <Button>Get My Resume</Button>
-          </a>
+          <Button
+            isLink={true}
+            href="https://ristek.link/Muhammad_Fayaad_CV"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Get My Resume
+          </Button>
         </div>
       </div>
       <div className="w-full mb-16 lg:mb-0 sm:w-[410px] self-center">

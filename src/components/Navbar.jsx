@@ -8,7 +8,7 @@ const NAVBAR_ITEMS = [
   { label: "Intro", to: "intro" },
   { label: "Projects", to: "projects" },
   { label: "Blogs", to: "blogs" },
-  { label: "Contact", to: "contact" },
+  // { label: "Contact", to: "contact" },
 ];
 
 const Navbar = (props) => {
@@ -19,7 +19,7 @@ const Navbar = (props) => {
   };
 
   return (
-    <nav className="flex sticky items-center justify-between h-16 top-0 -mt-16 mx-4 z-30 bg-fx-black">
+    <nav className="flex sticky items-center justify-between h-16 top-0 -mt-16 px-4 z-30 bg-fx-black">
       <LinkRouter
         to="/"
         onClick={toggleHome}

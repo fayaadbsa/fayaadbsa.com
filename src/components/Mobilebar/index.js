@@ -8,7 +8,7 @@ import {
   SidebarWrapper,
 } from "./SidebarElement";
 
-const Sidebar = (props) => {
+const Mobilebar = (props) => {
   const { handleSidebar, isOpen } = props;
 
   return (
@@ -36,4 +36,4 @@ const Sidebar = (props) => {
   );
 };
 
-export default Sidebar;
+export default Mobilebar;

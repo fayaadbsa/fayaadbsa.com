@@ -4,10 +4,11 @@ import { FaRegCalendar } from "react-icons/fa";
 import { BsClockHistory } from "react-icons/bs";
 import Tags from "../../components/Tags/Tags";
 import moment from "moment";
+import Button from "../../components/Button/Button";
 
-const BlogSection = () => {
+const BlogsSection = () => {
   return (
-    <div className="flex flex-col pb-32" id="projects">
+    <div className="flex flex-col pb-32" id="blogs">
       <div className="flex items-center">
         <div className="border-b border-fx-orange w-14 mr-6" />
         <span className="text-3xl font-light text-fx-linear-orange-yellow">
@@ -19,6 +20,16 @@ const BlogSection = () => {
           <BlogCard blog={blog} />
         ))}
       </div>
+      <div className="flex self-end mt-4">
+        <Button
+          isLink={true}
+          href={"https://fayaadbsa.medium.com"}
+          target="_blank"
+          rel="noreferrer"
+        >
+          See More
+        </Button>
+      </div>
     </div>
   );
 };
@@ -27,12 +38,9 @@ const BlogCard = (props) => {
   const blog = props.blog;
 
   return (
-    <a
+    <div
       key={blog.id}
-      className="flex flex-col fx-card basis-1/3 p-6 mt-6 rounded-lg"
-      href={blog.url}
-      target="_blank"
-      rel="noreferrer"
+      className="flex flex-col border-2 border-fx-orange basis-1/3 p-6 mt-6 rounded-lg"
     >
       <div className="rounded-lg -mt-12 mb-6 z-10">
         <img
@@ -41,7 +49,14 @@ const BlogCard = (props) => {
           className="rounded-lg w-full h-36 object-cover mt-auto"
         />
       </div>
-      <p className="text-fx-linear-orange-yellow font-bold">{blog.title}</p>
+      <a
+        href={blog.url}
+        target="_blank"
+        rel="noreferrer"
+        className="fx-link font-bold"
+      >
+        {blog.title}
+      </a>
       <div className="inline-flex items-center mt-2 text-sm text-fx-white-sec">
         <FaRegCalendar color="#F2F2F2" className="mr-2" />{" "}
         <span>{`${moment(blog.dateCreated).format("MMM DD, YYYY")}`}</span>
@@ -64,22 +79,8 @@ const BlogCard = (props) => {
       >
         {blog.description}
       </p>
-    </a>
-  );
-};
-
-const Tag = (props) => {
-  const tag = props.tag;
-
-  return (
-    <div
-      key={tag.id}
-      className="bg-gray-600 inline-flex px-3 py-1 
-      mr-2 my-4 rounded drop-shadow-md"
-    >
-      <h5 className="text-gray-200 font-light">{tag.name}</h5>
     </div>
   );
 };
 
-export default BlogSection;
+export default BlogsSection;

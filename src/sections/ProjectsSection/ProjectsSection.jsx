@@ -21,7 +21,7 @@ const ProjectsSection = () => {
       </div>
       {currentProject && (
         <div className="flex items-start flex-col mt-9 lg:flex-row">
-          <div className="flex min-w-full w-full mr-16 sm:min-w-[540px] sm:w-[540px] ">
+          <div className="flex min-w-full w-full mr-16 sm:min-w-[540px] sm:w-[540px]">
             <img
               className="rounded-lg w-full object-contain"
               src={currentProject.img}
@@ -42,15 +42,28 @@ const ProjectsSection = () => {
                 "MMMM YYYY"
               )} - ${moment(currentProject.endDate).format("MMMM YYYY")}`}
             </div>
-            <p className="mt-6 text-lg">{currentProject.desc}</p>
+            <p
+              className="mt-6 text-lg"
+              style={{
+                maxWidth: "100%",
+                display: "-webkit-box",
+                WebkitBoxOrient: "vertical",
+                WebkitLineClamp: 3,
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+              }}
+            >
+              {currentProject.desc}
+            </p>
             <div className="mt-6">
-              <a
-                href={currentProject.websiteUrl || "/"}
+              <Button
+                isLink={true}
+                href={currentProject.websiteUrl}
                 target="_blank"
                 rel="noreferrer"
               >
-                <Button>Go to Website</Button>
-              </a>
+                Go to Website
+              </Button>
             </div>
           </div>
         </div>
