@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.c83dc255.css",
-    "main.js": "/static/js/main.9e8ca02c.js",
+    "main.js": "/static/js/main.e25af52e.js",
     "static/media/debatehall.png": "/static/media/debatehall.2f2a8afd630db87f3a17.png",
     "static/media/fayaad.png": "/static/media/fayaad.77aee2abf682f36f95c9.png",
     "static/media/paypewe.png": "/static/media/paypewe.5daf5f366aa99c04487c.png",
     "static/media/educovid.png": "/static/media/educovid.07557b6b7a251d28a69d.png",
     "static/media/staco.png": "/static/media/staco.33007e954f3d868222e5.png",
+    "service-worker.js": "/service-worker.js",
     "static/media/siruco6.png": "/static/media/siruco6.2ec112e5f51e92d118d7.png",
     "static/media/rubik-1.svg": "/static/media/rubik-1.b45c577eae6cafca4ff255b2c602540c.svg",
     "static/media/rubik-4.svg": "/static/media/rubik-4.5c074c07b19b27038319ab42f85aa5fd.svg",
@@ -14,10 +15,10 @@
     "static/media/rubik-3.svg": "/static/media/rubik-3.450018cd64d5d65ee35ca0ccdd9a75c7.svg",
     "index.html": "/index.html",
     "main.c83dc255.css.map": "/static/css/main.c83dc255.css.map",
-    "main.9e8ca02c.js.map": "/static/js/main.9e8ca02c.js.map"
+    "main.e25af52e.js.map": "/static/js/main.e25af52e.js.map"
   },
   "entrypoints": [
     "static/css/main.c83dc255.css",
-    "static/js/main.9e8ca02c.js"
+    "static/js/main.e25af52e.js"
   ]
 }
