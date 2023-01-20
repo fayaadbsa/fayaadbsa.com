@@ -27,7 +27,7 @@ const IntroSection = () => {
         <div className="mt-16">
           <Button
             isLink={true}
-            href="https://ristek.link/Muhammad_Fayaad_CV"
+            href="https://ristek.link/fayaadbsa-cv"
             target="_blank"
             rel="noreferrer"
           >
