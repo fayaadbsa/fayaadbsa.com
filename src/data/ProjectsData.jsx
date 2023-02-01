@@ -4,9 +4,9 @@ import debatehallImg from "../images/projects/debatehall.png";
 import stacoImg from "../images/projects/staco.png";
 import siruco6Img from "../images/projects/siruco6.png";
 
-export const projectsData = [
+export const PROJECTS_DATA = [
   {
-    id: "1",
+    id: 1,
     img: paypeweImg,
     alt: "Paypewe Website",
     title: "Paypewe",
@@ -14,10 +14,10 @@ export const projectsData = [
     websiteUrl: "https://paypewe.herokuapp.com/",
     startDate: "2020-07",
     endDate: "2020-10",
-    tagIds: ["5", "6", "8", "10", "12"],
+    tagIds: ["Django", "jQuery", "Bootstrap", "TDD", "Ajax"],
   },
   {
-    id: "2",
+    id: 2,
     img: educovidImg,
     alt: "Educovid Website",
     title: "Educovid",
@@ -25,10 +25,10 @@ export const projectsData = [
     websiteUrl: "https://educovid.herokuapp.com/",
     startDate: "2020-10",
     endDate: "2021-01",
-    tagIds: ["5", "6", "8", "10", "12"],
+    tagIds: ["Django", "jQuery", "Bootstrap", "TDD", "Ajax"],
   },
   {
-    id: "3",
+    id: 3,
     img: stacoImg,
     alt: "STACO Website",
     title: "STACO",
@@ -36,10 +36,10 @@ export const projectsData = [
     websiteUrl: "https://staco-b1.herokuapp.com/",
     startDate: "2021-03",
     endDate: "2021-06",
-    tagIds: ["11", "8"],
+    tagIds: ["Spring Boot", "Bootstrap"],
   },
   {
-    id: "4",
+    id: 4,
     img: siruco6Img,
     alt: "SIRUCO Website",
     title: "SIRUCO",
@@ -47,10 +47,10 @@ export const projectsData = [
     websiteUrl: "https://siruco6.herokuapp.com/",
     startDate: "2021-03",
     endDate: "2021-06",
-    tagIds: ["9", "5", "8", "12"],
+    tagIds: ["PostgeSQL", "Django", "Bootstrap", "Ajax"],
   },
   {
-    id: "5",
+    id: 5,
     img: debatehallImg,
     alt: "DebateHall Website",
     title: "DebateHall",
@@ -58,6 +58,6 @@ export const projectsData = [
     websiteUrl: "https://debatehall.herokuapp.com/",
     startDate: "2021-08",
     endDate: "2022-01",
-    tagIds: ["5", "8"],
+    tagIds: ["Django", "Bootstrap"],
   },
 ];

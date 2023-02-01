@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import rubik1 from "../../images/decorations/rubik-1.svg";
 import rubik2 from "../../images/decorations/rubik-2.svg";
 import rubik3 from "../../images/decorations/rubik-3.svg";
-import rubik4 from "../../images/decorations/rubik-4.svg";
 
 const Backgrounds = () => {
   const [offsetY, setOffsetY] = useState(0);
@@ -32,12 +31,6 @@ const Backgrounds = () => {
         style={{ transform: `translateY(${offsetY * 0.8}px)` }}
       >
         <img src={rubik3} alt="rubik" />
-      </div>
-      <div
-        className={`absolute -z-10 left-16 top-[65rem] opacity-40`}
-        style={{ transform: `translateY(${offsetY * 0.8}px)` }}
-      >
-        <img src={rubik4} alt="rubik" />
       </div>
     </>
   );

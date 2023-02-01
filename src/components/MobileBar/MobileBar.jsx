@@ -27,7 +27,7 @@ const Mobilebar = (props) => {
             <LinkS
               to={item.to}
               onClick={handleSidebar}
-              className="flex items-center content-center text-2xl ease-in-out
+              className="flex items-center content-center justify-center text-2xl ease-in-out
               text-fx-white cursor-pointer"
             >
               {item.label}

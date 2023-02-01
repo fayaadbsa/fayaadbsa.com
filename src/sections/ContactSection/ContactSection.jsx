@@ -1,4 +1,5 @@
 import React from "react";
+import { lang } from "../../data/lang";
 
 const ContactSection = () => {
   return (
@@ -6,19 +7,19 @@ const ContactSection = () => {
       <div className="flex items-center">
         <div className="border-b border-fx-orange w-14 mr-6" />
         <span className="text-3xl font-light text-fx-linear-orange-yellow">
-          Contact Me!
+          {lang.contact.title}
         </span>
       </div>
-      <div className="fx-border py-10 px-16 mt-9 rounded-lg ">
+      <div className="fx-border py-10 px-16 mt-9 rounded-lg text-fx-white">
         <p>
-          I'm always excited to find new creative website projects. If you have
-          something you think we can work on together, drop me a message! Im
-          available for freelance projects or part-time employment.
+          {lang.contact.description.first}
           <br />
           <br />
-          Feel free to reach me on
+          {lang.contact.description.second}
           <span className="text-fx-linear-orange-yellow-aqua font-bold ml-2">
-            <a href="mailto:fayet256@gmail.com">fayet256@gmail.com</a>
+            <a href={lang.contact.description.email}>
+              {lang.contact.description.third}
+            </a>
           </span>
         </p>
       </div>

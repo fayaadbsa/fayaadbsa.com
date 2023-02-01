@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Footer from "../../components/Footer";
-import IntroSection from "../../sections/IntroSection";
+import IntroSection from "../../sections/IntroSection/IntroSection";
 import BlogsSection from "../../sections/BlogsSection/BlogsSection";
 import ProjectsSection from "../../sections/ProjectsSection/ProjectsSection";
 import Backgrounds from "../../components/Backgrounds/Backgrounds";

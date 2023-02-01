@@ -7,7 +7,7 @@ const Logo = () => {
       className="font-dancing-script text-4.5xl font-bold 
       text-fx-linear-orange-yellow-aqua"
     >
-      {lang.logo}
+      {lang.navbar.logo}
     </div>
   );
 };

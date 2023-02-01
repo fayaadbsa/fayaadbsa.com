@@ -42,7 +42,7 @@ const NavBar = (props) => {
       <div>
         <FaBars
           size={30}
-          className="cursor-pointer md:hidden"
+          className="cursor-pointer md:hidden text-fx-white"
           onClick={handleSidebar}
         />
       </div>
