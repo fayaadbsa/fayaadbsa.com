@@ -31,6 +31,9 @@ module.exports = {
       maxWidth: {
         "8xl": "90rem",
       },
+      dropShadow: {
+        "fx-soft": "0px 0px 15px rgba(255, 187, 20, 0.8)",
+      },
     },
   },
   plugins: [],

@@ -2,9 +2,9 @@ import React from "react";
 import { blogsData } from "../../data/BlogsData";
 import { FaRegCalendar } from "react-icons/fa";
 import { BsClockHistory } from "react-icons/bs";
-import Tags from "../../components/Tags/Tags";
 import moment from "moment";
-import Button from "../../components/Button/Button";
+import Button from "../../components/Atomic/Button/Button";
+import Tags from "../../components/Atomic/Tags/Tags";
 
 const BlogsSection = () => {
   return (

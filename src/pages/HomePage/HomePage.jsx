@@ -1,21 +1,14 @@
 import React, { useState } from "react";
-import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import IntroSection from "../../sections/IntroSection";
 import BlogsSection from "../../sections/BlogsSection/BlogsSection";
 import ProjectsSection from "../../sections/ProjectsSection/ProjectsSection";
 import Backgrounds from "../../components/Backgrounds/Backgrounds";
 import ContactSection from "../../sections/ContactSection/ContactSection";
-import Sidebar from "../../components/Sidebar/Sidebar";
-import Mobilebar from "../../components/Mobilebar";
-
-const SectionWrapper = (props) => {
-  return (
-    <div className="max-w-8xl mx-auto px-4 md:px-16 xl:px-32">
-      {props.children}
-    </div>
-  );
-};
+import Mobilebar from "../../components/MobileBar/MobileBar";
+import NavBar from "../../components/NavBar/NavBar";
+import SideBar from "../../components/SideBar/SideBar";
+import { SectionWrapper } from "../../utils/SectionWrapper";
 
 const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,9 +19,9 @@ const HomePage = () => {
 
   return (
     <div className="static">
-      <Navbar handleSidebar={handleSidebar} />
+      <NavBar handleSidebar={handleSidebar} />
       <Mobilebar isOpen={isOpen} handleSidebar={handleSidebar} />
-      <Sidebar />
+      <SideBar />
       <SectionWrapper>
         <IntroSection />
         <ProjectsSection />

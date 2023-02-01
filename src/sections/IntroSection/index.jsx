@@ -1,6 +1,6 @@
 import React from "react";
 import ProfilePicture from "../../images/fayaad.png";
-import Button from "../../components/Button/Button";
+import Button from "../../components/Atomic/Button/Button";
 
 const IntroSection = () => {
   return (

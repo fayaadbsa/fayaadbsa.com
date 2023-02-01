@@ -27,6 +27,14 @@ body {
   background: #191919;
 }
 
+.fx-neon-hover:hover,
+.fx-neon-active {
+  text-shadow: 
+    0px 0px 7px rgba(255, 255, 255, 0.3),
+    0px 0px 10px rgba(255, 187, 20, 0.3), 
+    0px 0px 21px rgba(255, 187, 20, 0.3);
+}
+
 .fx-card,
 .fx-button {
   position: relative;

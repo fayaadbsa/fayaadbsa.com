@@ -1,7 +1,7 @@
 import moment from "moment";
 import React, { useEffect, useState } from "react";
-import Button from "../../components/Button/Button";
-import Tags from "../../components/Tags/Tags";
+import Button from "../../components/Atomic/Button/Button";
+import Tags from "../../components/Atomic/Tags/Tags";
 import { projectsData } from "../../data/ProjectsData";
 
 const ProjectsSection = () => {
