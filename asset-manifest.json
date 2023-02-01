@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.57e46b7f.css",
-    "main.js": "/static/js/main.d5b8d75b.js",
+    "main.js": "/static/js/main.bc41edae.js",
     "static/media/debatehall.png": "/static/media/debatehall.2f2a8afd630db87f3a17.png",
     "static/media/fayaad.png": "/static/media/fayaad.77aee2abf682f36f95c9.png",
     "static/media/paypewe.png": "/static/media/paypewe.5daf5f366aa99c04487c.png",
@@ -15,10 +15,10 @@
     "static/media/rubik-3.svg": "/static/media/rubik-3.450018cd64d5d65ee35ca0ccdd9a75c7.svg",
     "index.html": "/index.html",
     "main.57e46b7f.css.map": "/static/css/main.57e46b7f.css.map",
-    "main.d5b8d75b.js.map": "/static/js/main.d5b8d75b.js.map"
+    "main.bc41edae.js.map": "/static/js/main.bc41edae.js.map"
   },
   "entrypoints": [
     "static/css/main.57e46b7f.css",
-    "static/js/main.d5b8d75b.js"
+    "static/js/main.bc41edae.js"
   ]
 }
