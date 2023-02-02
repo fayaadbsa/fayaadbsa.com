@@ -60,11 +60,11 @@ export const lang = {
   footer: {
     developed: {
       label: "Developed with 🧡 by",
-      name: "Fayaad",
+      name: " Fayaad",
     },
     designed: {
       label: "Designed with 💛 by",
-      name: "Zalfa",
+      name: " Zalfa",
     },
   },
 };
