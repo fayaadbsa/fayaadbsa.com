@@ -3,7 +3,7 @@ import { FaTimes } from "react-icons/fa";
 import { Link as LinkS } from "react-scroll";
 import { NAVBAR_DATA } from "../../data/NavbarData";
 
-const Mobilebar = (props) => {
+const MobileBar = (props) => {
   const { handleSidebar, isOpen } = props;
 
   return (
@@ -26,6 +26,11 @@ const Mobilebar = (props) => {
           return (
             <LinkS
               to={item.to}
+              smooth={true}
+              duration={800}
+              spy={true}
+              exact="true"
+              offset={-80}
               onClick={handleSidebar}
               className="flex items-center content-center justify-center text-2xl ease-in-out
               text-fx-white cursor-pointer"
@@ -39,4 +44,4 @@ const Mobilebar = (props) => {
   );
 };
 
-export default Mobilebar;
+export default MobileBar;
