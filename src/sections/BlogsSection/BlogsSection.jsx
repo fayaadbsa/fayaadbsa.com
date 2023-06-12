@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "../../components/Atomic/Button/Button";
-import { lang } from "../../data/lang";
-import { BLOGS_DATA } from "../../data/BlogsData";
-import BlogCard from "../../components/Cards/BlogCard/BlogCard";
+import Button from "components/Atomic/Button/Button";
+import { lang } from "data/lang";
+import { BLOGS_DATA } from "data/BlogsData";
+import BlogCard from "components/Cards/BlogCard/BlogCard";
 
 const BlogsSection = () => {
   return (

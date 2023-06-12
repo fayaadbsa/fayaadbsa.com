@@ -1,7 +1,7 @@
 import React from "react";
-import ProfilePicture from "../../images/fayaad.png";
-import Button from "../../components/Atomic/Button/Button";
-import { lang } from "../../data/lang";
+import ProfilePicture from "images/fayaad.png";
+import Button from "components/Atomic/Button/Button";
+import { lang } from "data/lang";
 
 const IntroSection = () => {
   return (

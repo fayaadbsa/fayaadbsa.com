@@ -1,14 +1,13 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
 import { Link as LinkS } from "react-scroll";
-import { NAVBAR_DATA } from "../../data/NavbarData";
+import { NAVBAR_DATA } from "data/NavbarData";
 
 const MobileBar = (props) => {
   const { handleSidebar, isOpen } = props;
 
   return (
     <div
-      isOpen={isOpen}
       onClick={handleSidebar}
       className={`fixed z-50 w-full h-full grid items-center left-0
         ease-in-out duration-300 bg-fx-black

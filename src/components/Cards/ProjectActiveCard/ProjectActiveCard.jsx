@@ -1,8 +1,8 @@
 import moment from "moment";
 import React from "react";
-import { lang } from "../../../data/lang";
-import Button from "../../Atomic/Button/Button";
-import Tags from "../../Atomic/Tags/Tags";
+import { lang } from "data/lang";
+import Tags from "components/Atomic/Tags/Tags";
+import Button from "components/Atomic/Button/Button";
 
 const ProjectActiveCard = (props) => {
   const { project } = props;

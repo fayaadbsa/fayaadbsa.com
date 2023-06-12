@@ -1,6 +1,6 @@
 import React from "react";
-import { lang } from "../../data/lang";
-import rubik4 from "../../images/decorations/rubik-4.svg";
+import { lang } from "data/lang";
+import rubik4 from "images/decorations/rubik-4.svg";
 
 const Footer = () => {
   return (
