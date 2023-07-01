@@ -7,7 +7,7 @@ import Backgrounds from "components/Backgrounds/Backgrounds";
 import ContactSection from "sections/ContactSection/ContactSection";
 import MobileBar from "components/MobileBar/MobileBar";
 import NavBar from "components/NavBar/NavBar";
-// import SideBar from "components/SideBar/SideBar";
+import Sidebar from "components/Sidebar/Sidebar";
 import { SectionWrapper } from "utils/SectionWrapper";
 
 const HomePage = () => {
@@ -21,14 +21,14 @@ const HomePage = () => {
     <div className="static">
       <NavBar handleSidebar={handleSidebar} />
       <MobileBar isOpen={isOpen} handleSidebar={handleSidebar} />
-      {/* <SideBar /> */}
+      <Sidebar />
       <SectionWrapper>
         <IntroSection />
         <ProjectsSection />
         <BlogsSection />
         <ContactSection />
       </SectionWrapper>
-      <Footer />
+      {/* <Footer /> */}
       <Backgrounds />
     </div>
   );
