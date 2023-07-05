@@ -28,7 +28,7 @@ const HomePage = () => {
         <BlogsSection />
         <ContactSection />
       </SectionWrapper>
-      {/* <Footer /> */}
+      <Footer />
       <Backgrounds />
     </div>
   );
