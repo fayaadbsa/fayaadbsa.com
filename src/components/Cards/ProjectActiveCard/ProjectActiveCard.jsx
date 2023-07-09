@@ -45,7 +45,7 @@ const ProjectActiveCard = (props) => {
           {project.desc}
         </p>
         <div className="mt-6">
-          <Link to={project.websiteUrl} target="_blank" rel="noreferrer">
+          <Link to={project.websiteUrl} target="_blank">
             <Button>{lang.project.button.label}</Button>
           </Link>
         </div>

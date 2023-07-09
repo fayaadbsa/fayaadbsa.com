@@ -20,7 +20,7 @@ const BlogsSection = () => {
         ))}
       </div>
       <div className="flex self-end mt-4">
-        <Link to={lang.blog.button.link} target="_blank" rel="noreferrer">
+        <Link to={lang.blog.button.link} target="_blank">
           <Button>{lang.blog.button.label}</Button>
         </Link>
       </div>
