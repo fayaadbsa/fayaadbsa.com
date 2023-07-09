@@ -28,7 +28,7 @@ const IntroSection = () => {
         </div>
         <div className="mt-16">
           <Link to={lang.intro.resume.link} target="_blank" rel="noreferrer">
-            <Button isLink={true}>{lang.intro.resume.label}</Button>
+            <Button>{lang.intro.resume.label}</Button>
           </Link>
         </div>
       </div>

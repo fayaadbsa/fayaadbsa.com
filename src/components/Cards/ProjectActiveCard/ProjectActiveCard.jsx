@@ -3,6 +3,7 @@ import React from "react";
 import { lang } from "data/lang";
 import Tags from "components/Atomic/Tags/Tags";
 import Button from "components/Atomic/Button/Button";
+import { Link } from "react-router-dom";
 
 const ProjectActiveCard = (props) => {
   const { project } = props;
@@ -44,14 +45,9 @@ const ProjectActiveCard = (props) => {
           {project.desc}
         </p>
         <div className="mt-6">
-          <Button
-            isLink={true}
-            href={project.websiteUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {lang.project.button.label}
-          </Button>
+          <Link to={project.websiteUrl} target="_blank" rel="noreferrer">
+            <Button>{lang.project.button.label}</Button>
+          </Link>
         </div>
       </div>
     </div>

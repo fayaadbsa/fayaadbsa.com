@@ -3,6 +3,7 @@ import Button from "components/Atomic/Button/Button";
 import { lang } from "data/lang";
 import { BLOGS_DATA } from "data/BlogsData";
 import BlogCard from "components/Cards/BlogCard/BlogCard";
+import { Link } from "react-router-dom";
 
 const BlogsSection = () => {
   return (
@@ -19,14 +20,9 @@ const BlogsSection = () => {
         ))}
       </div>
       <div className="flex self-end mt-4">
-        <Button
-          isLink={true}
-          href={lang.blog.button.link}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {lang.blog.button.label}
-        </Button>
+        <Link to={lang.blog.button.link} target="_blank" rel="noreferrer">
+          <Button>{lang.blog.button.label}</Button>
+        </Link>
       </div>
     </div>
   );
