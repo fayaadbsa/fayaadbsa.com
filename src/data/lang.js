@@ -22,16 +22,6 @@ export const lang = {
   project: {
     id: "projects",
     title: "Projects",
-    subtitle: "A Website Enthusiast.",
-    description:
-      "I also love to play online games 🎮, watch movies 🎥, and travel ⛰",
-    resume: {
-      label: "Get My Resume",
-      link: "https://ristek.link/fayaadbsa-cv",
-    },
-    picture: {
-      alt: "Fayaad",
-    },
     button: {
       label: "Go To Website",
     },

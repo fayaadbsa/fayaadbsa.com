@@ -7,8 +7,8 @@ import Backgrounds from "components/Backgrounds/Backgrounds";
 import ContactSection from "sections/ContactSection/ContactSection";
 import MobileBar from "components/MobileBar/MobileBar";
 import NavBar from "components/NavBar/NavBar";
-import Sidebar from "components/Sidebar/Sidebar";
 import { SectionWrapper } from "utils/SectionWrapper";
+import SideBar from "components/SideBar/SideBar";
 
 const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +21,7 @@ const HomePage = () => {
     <div className="static">
       <NavBar handleSidebar={handleSidebar} />
       <MobileBar isOpen={isOpen} handleSidebar={handleSidebar} />
-      <Sidebar />
+      <SideBar />
       <SectionWrapper>
         <IntroSection />
         <ProjectsSection />

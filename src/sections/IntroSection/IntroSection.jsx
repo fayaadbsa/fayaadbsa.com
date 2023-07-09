@@ -2,6 +2,7 @@ import React from "react";
 import ProfilePicture from "images/fayaad.png";
 import Button from "components/Atomic/Button/Button";
 import { lang } from "data/lang";
+import { Link } from "react-router-dom";
 
 const IntroSection = () => {
   return (
@@ -26,14 +27,9 @@ const IntroSection = () => {
           {lang.intro.description}
         </div>
         <div className="mt-16">
-          <Button
-            isLink={true}
-            href={lang.intro.resume.link}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {lang.intro.resume.label}
-          </Button>
+          <Link to={lang.intro.resume.link} target="_blank" rel="noreferrer">
+            <Button isLink={true}>{lang.intro.resume.label}</Button>
+          </Link>
         </div>
       </div>
       <div className="w-full mb-16 lg:mb-0 sm:w-[410px] self-center">
