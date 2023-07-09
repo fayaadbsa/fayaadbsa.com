@@ -1,6 +1,6 @@
 import React from "react";
 import ProfilePicture from "images/fayaad.png";
-import Button from "components/Atomic/Button/Button";
+import Button from "components/Button/Button";
 import { lang } from "data/lang";
 import { Link } from "react-router-dom";
 

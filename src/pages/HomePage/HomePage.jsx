@@ -5,10 +5,10 @@ import BlogsSection from "sections/BlogsSection/BlogsSection";
 import ProjectsSection from "sections/ProjectsSection/ProjectsSection";
 import Backgrounds from "components/Backgrounds/Backgrounds";
 import ContactSection from "sections/ContactSection/ContactSection";
-import MobileBar from "components/MobileBar/MobileBar";
-import NavBar from "components/NavBar/NavBar";
+import MobileBar from "components/Navigation/MobileBar";
+import NavBar from "components/Navigation/NavBar";
+import FloatBar from "components/Navigation/FloatBar";
 import { SectionWrapper } from "utils/SectionWrapper";
-import FloatBar from "components/FloatBar/FloatBar";
 
 const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false);

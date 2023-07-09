@@ -4,7 +4,7 @@ import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
-import ProjectCard from "../Cards/ProjectCard/ProjectCard";
+import ProjectCard from "../Card/ProjectCard";
 
 const ProjectCarousel = (props) => {
   const { projects, currentProject, setCurrentProject } = props;
