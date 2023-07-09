@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { CONTACTS_DATA } from "data/ContactsData";
 
-const SideBar = () => {
+const FloatBar = () => {
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
@@ -38,4 +38,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+export default FloatBar;
