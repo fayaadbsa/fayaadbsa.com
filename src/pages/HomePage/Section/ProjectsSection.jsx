@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ProjectActiveCard from "components/Card/ProjectActiveCard";
-import ProjectCarousel from "components/Carousel/ProjectCarousel";
+import ProjectActiveCard from "components/card/ProjectActiveCard";
+import ProjectCarousel from "components/carousel/ProjectCarousel";
 import { lang } from "data/lang";
 import { PROJECTS_DATA } from "data/ProjectsData";
 
