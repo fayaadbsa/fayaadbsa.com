@@ -1,8 +1,8 @@
 import moment from "moment";
 import React from "react";
-import { lang } from "data/lang";
-import Tags from "components/badge/Tags";
-import Button from "components/button/Button";
+import { lang } from "@/data/lang";
+import Tags from "@/components/badge/Tags";
+import Button from "@/components/button/Button";
 import { Link } from "react-router-dom";
 
 const ProjectActiveCard = (props) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { lang } from "data/lang";
+import { lang } from "@/data/lang";
 
 const ContactSection = () => {
   return (

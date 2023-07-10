@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { CONTACTS_DATA } from "data/ContactsData";
+import { CONTACTS_DATA } from "@/data/ContactsData";
 
 const FloatBar = () => {
   const [offsetY, setOffsetY] = useState(0);

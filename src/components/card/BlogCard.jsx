@@ -2,8 +2,8 @@ import React from "react";
 import { FaRegCalendar } from "react-icons/fa";
 import { BsClockHistory } from "react-icons/bs";
 import moment from "moment";
-import { lang } from "data/lang";
-import Tags from "components/badge/Tags";
+import { lang } from "@/data/lang";
+import Tags from "@/components/badge/Tags";
 
 const BlogCard = (props) => {
   const { blog } = props;

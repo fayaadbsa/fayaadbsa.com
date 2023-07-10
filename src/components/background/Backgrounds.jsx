@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import rubik1 from "images/decorations/rubik-1.svg";
-import rubik2 from "images/decorations/rubik-2.svg";
-import rubik3 from "images/decorations/rubik-3.svg";
+import rubik1 from "@/images/decorations/rubik-1.svg";
+import rubik2 from "@/images/decorations/rubik-2.svg";
+import rubik3 from "@/images/decorations/rubik-3.svg";
 
 const Backgrounds = () => {
   const [offsetY, setOffsetY] = useState(0);
