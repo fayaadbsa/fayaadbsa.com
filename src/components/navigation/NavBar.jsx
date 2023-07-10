@@ -6,7 +6,7 @@ import { FaBars } from "react-icons/fa";
 import { NAVBAR_DATA } from "@/data/NavbarData";
 import Logo from "../logo/Logo";
 
-const Navbar = (props) => {
+const NavBar = (props) => {
   const { handleSidebar } = props;
 
   const toggleHome = () => {
@@ -50,4 +50,4 @@ const Navbar = (props) => {
   );
 };
 
-export default Navbar;
+export default NavBar;

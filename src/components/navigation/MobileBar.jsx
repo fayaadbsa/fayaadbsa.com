@@ -3,7 +3,7 @@ import { FaTimes } from "react-icons/fa";
 import { Link as LinkS } from "react-scroll";
 import { NAVBAR_DATA } from "@/data/NavbarData";
 
-const Mobilebar = (props) => {
+const MobileBar = (props) => {
   const { handleSidebar, isOpen } = props;
 
   return (
@@ -43,4 +43,4 @@ const Mobilebar = (props) => {
   );
 };
 
-export default Mobilebar;
+export default MobileBar;
