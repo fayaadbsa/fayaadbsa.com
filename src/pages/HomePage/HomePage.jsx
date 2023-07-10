@@ -3,7 +3,7 @@ import IntroSection from "./Section/IntroSection";
 import ProjectsSection from "./Section/ProjectsSection";
 import BlogsSection from "./Section/BlogsSection";
 import ContactSection from "./Section/ContactSection";
-import FloatBar from "@/components/navigation/FloatBar";
+// import FloatBar from "@/components/navigation/FloatBar";
 // import MobileBar from "@/components/navigation/MobileBar";
 import NavBar from "@/components/navigation/NavBar";
 import Footer from "@/components/footer/Footer";
@@ -21,7 +21,7 @@ const HomePage = () => {
     <div className="static">
       <NavBar handleSidebar={handleSidebar} />
       {/* <MobileBar isOpen={isOpen} handleSidebar={handleSidebar} /> */}
-      <FloatBar />
+      {/* <FloatBar /> */}
       <SectionWrapper>
         <IntroSection />
         <ProjectsSection />
