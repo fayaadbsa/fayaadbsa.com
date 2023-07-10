@@ -4,7 +4,7 @@ import { Link as LinkRouter } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
 import { FaBars } from "react-icons/fa";
 import { NAVBAR_DATA } from "data/NavbarData";
-import Logo from "../Logo/Logo";
+import Logo from "../logo/Logo";
 
 const NavBar = (props) => {
   const { handleSidebar } = props;

@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { SectionWrapper } from "utils/SectionWrapper";
+import { SectionWrapper } from "components/SectionWrapper";
 import IntroSection from "./Section/IntroSection";
 import ProjectsSection from "./Section/ProjectsSection";
 import BlogsSection from "./Section/BlogsSection";
 import ContactSection from "./Section/ContactSection";
-import MobileBar from "components/Navigation/MobileBar";
-import NavBar from "components/Navigation/NavBar";
-import FloatBar from "components/Navigation/FloatBar";
-import Footer from "components/Footer";
-import Backgrounds from "components/Backgrounds/Backgrounds";
+import MobileBar from "components/navigation/MobileBar";
+import NavBar from "components/navigation/NavBar";
+import FloatBar from "components/navigation/FloatBar";
+import Footer from "components/footer/Footer";
+import Backgrounds from "components/background/Backgrounds";
 
 const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false);
