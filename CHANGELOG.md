@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.0.0](https://github.com/fayaadbsa/fayaadbsa.com/compare/v0.1.1...v1.0.0) (2023-07-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* update folder name
+
+### Features
+
+* add greet ([11af1ae](https://github.com/fayaadbsa/fayaadbsa.com/commit/11af1ae3b7128991e73b2cdbef120d4dbf5dc043))
+
+
+### Bug Fixes
+
+* update folder name ([b1848c9](https://github.com/fayaadbsa/fayaadbsa.com/commit/b1848c99f9c10cf53cbf3e0c000ecfe837cbac7c))
+
 ## [0.1.1](https://github.com/fayaadbsa/fayaadbsa.com/compare/v0.1.0...v0.1.1) (2023-07-09)
 
 
