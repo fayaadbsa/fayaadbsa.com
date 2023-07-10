@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.0.0](https://github.com/fayaadbsa/fayaadbsa.com/compare/v1.0.0...v2.0.0) (2023-07-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* migration to vite
+
+### Bug Fixes
+
+* change name ([ef64e51](https://github.com/fayaadbsa/fayaadbsa.com/commit/ef64e51ec2f81d5942f06db18be240a6d16beffc))
+
+
+### Miscellaneous Chores
+
+* migration to vite ([5cb6892](https://github.com/fayaadbsa/fayaadbsa.com/commit/5cb68926bce7ae83dbd320b4fd33efa9c0f187c7))
+
 ## [1.0.0](https://github.com/fayaadbsa/fayaadbsa.com/compare/v0.1.1...v1.0.0) (2023-07-10)
 
 
