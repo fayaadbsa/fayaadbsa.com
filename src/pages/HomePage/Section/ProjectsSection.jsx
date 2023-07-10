@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import ProjectActiveCard from "components/card/ProjectActiveCard";
-import ProjectCarousel from "components/carousel/ProjectCarousel";
-import { lang } from "data/lang";
-import { PROJECTS_DATA } from "data/ProjectsData";
+import ProjectActiveCard from "@/components/card/ProjectActiveCard";
+import ProjectCarousel from "@/components/carousel/ProjectCarousel";
+import { lang } from "@/data/lang";
+import { PROJECTS_DATA } from "@/data/ProjectsData";
 
 const ProjectsSection = () => {
   const [currentProject, setCurrentProject] = useState(PROJECTS_DATA[0]);

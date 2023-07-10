@@ -1,13 +1,12 @@
 import React from "react";
-
-import "./index.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage/HomePage";
-import { greet } from "utils/greet";
+import HomePage from "@/pages/HomePage/HomePage";
+import { greet } from "@/utils/greet";
+import "./index.css"
 
 greet();
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Routes>
@@ -16,6 +15,6 @@ function App() {
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;
