@@ -4,10 +4,10 @@ import ProjectsSection from "./Section/ProjectsSection";
 import BlogsSection from "./Section/BlogsSection";
 import ContactSection from "./Section/ContactSection";
 import { SectionWrapper } from "@/components/SectionWrapper";
+import Navbar from "@/components/navigation/NavBar";
+import Mobilebar from "@/components/navigation/MobileBar";
+import Floatbar from "@/components/navigation/FloatBar";
 import Backgrounds from "@/components/background/Backgrounds";
-// import FloatBar from "@/components/navigation/FloatBar";
-// import MobileBar from "@/components/navigation/MobileBar";
-import NavBar from "@/components/navigation/NavBar";
 import Footer from "@/components/footer/Footer";
 
 const HomePage = () => {
@@ -19,9 +19,9 @@ const HomePage = () => {
 
   return (
     <div className="static">
-      <NavBar handleSidebar={handleSidebar} />
-      {/* <MobileBar isOpen={isOpen} handleSidebar={handleSidebar} /> */}
-      {/* <FloatBar /> */}
+      <Navbar handleSidebar={handleSidebar} />
+      <Mobilebar isOpen={isOpen} handleSidebar={handleSidebar} />
+      <Floatbar />
       <SectionWrapper>
         <IntroSection />
         <ProjectsSection />
