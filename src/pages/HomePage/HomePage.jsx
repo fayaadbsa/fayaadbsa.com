@@ -4,9 +4,9 @@ import ProjectsSection from "./Section/ProjectsSection";
 import BlogsSection from "./Section/BlogsSection";
 import ContactSection from "./Section/ContactSection";
 import { SectionWrapper } from "@/components/SectionWrapper";
-import Navbar from "@/components/navigation/NavBar";
-import Mobilebar from "@/components/navigation/MobileBar";
-import Floatbar from "@/components/navigation/FloatBar";
+import Navbar from "@/components/navigation/Navbar";
+import Mobilebar from "@/components/navigation/Mobilebar";
+import Floatbar from "@/components/navigation/Floatbar";
 import Backgrounds from "@/components/background/Backgrounds";
 import Footer from "@/components/footer/Footer";
 
