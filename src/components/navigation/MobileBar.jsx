@@ -24,7 +24,7 @@ const MobileBar = (props) => {
         {NAVBAR_DATA.map((item) => {
           return (
             <LinkS
-              to={item.to}
+              to={item.path}
               smooth={true}
               duration={800}
               spy={true}

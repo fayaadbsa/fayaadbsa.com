@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const IntroSection = () => {
   return (
     <div
-      className="flex flex-col-reverse items-start lg:items-center justify-between py-32 lg:flex-row"
+      className="flex flex-col-reverse items-start lg:items-center justify-between py-12 lg:flex-row"
       id={lang.intro.id}
     >
       <div className="flex flex-col w-full lg:w-[410px]">
