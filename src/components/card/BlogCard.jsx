@@ -11,7 +11,7 @@ const BlogCard = (props) => {
   return (
     <div
       key={blog.id}
-      className="flex flex-col border-2 border-fx-orange basis-1/3 p-6 mt-6 rounded-lg"
+      className="flex flex-col border-2 bg-fx-background border-fx-orange basis-1/3 p-6 mt-6 rounded-lg"
     >
       <div className="rounded-lg -mt-12 mb-6 z-10">
         <img
