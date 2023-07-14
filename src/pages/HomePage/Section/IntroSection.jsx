@@ -4,16 +4,23 @@ import Button from "@/components/button/Button";
 import { lang } from "@/data/lang";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
+import { useInView } from "react-intersection-observer";
 
 const IntroSection = () => {
+  const { ref, inView, entry } = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <div
+      id={lang.intro.id}
+      ref={ref}
       className={clsx(
         "flex flex-col-reverse lg:flex-row",
         "items-start lg:items-center justify-between",
-        "min-h-[60vh]"
+        "min-h-[60vh] transition-all duration-700",
+        inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
       )}
-      id={lang.intro.id}
     >
       <div className="flex flex-col w-full lg:w-[430px]">
         <p className="text-5xl sm:text-6xl text-fx-white self-center">

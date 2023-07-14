@@ -2,10 +2,22 @@ import React from "react";
 import { lang } from "@/data/lang";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
+import { useInView } from "react-intersection-observer";
 
 const ContactSection = () => {
+  const { ref, inView, entry } = useInView({
+    triggerOnce: true,
+  });
+
   return (
-    <div className="flex flex-col" id={lang.contact.id}>
+    <div
+      id={lang.contact.id}
+      ref={ref}
+      className={clsx(
+        "flex flex-col transition-all duration-700 delay-300",
+        inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+      )}
+    >
       <div className="flex items-center">
         <div className="border-b border-fx-orange w-14 mr-6" />
         <span className="text-3xl font-light text-fx-linear-orange-yellow">
