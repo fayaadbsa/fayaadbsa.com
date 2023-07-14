@@ -52,15 +52,15 @@ body {
   mask-composite: exclude;
 } */
 
-.fx-button:hover {
+/* .fx-button:hover {
   box-shadow: 0 8px 12px -8px #ffbb14;
   transform: translateY(-0.1em);
-}
+} */
 
-.fx-card:hover {
+/* .fx-card:hover {
   box-shadow: 0 12px 12px -8px #ffbb14;
   transform: translateY(-0.3em);
-}
+} */
 
 .fx-border {
   position: relative;
