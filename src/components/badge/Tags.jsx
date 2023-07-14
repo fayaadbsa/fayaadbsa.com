@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React from "react";
 
 const Tags = (props) => {
@@ -7,7 +8,12 @@ const Tags = (props) => {
     <>
       {tags.map((tag) => {
         return (
-          <p className="inline py-2 px-3 text-fx-aqua bg-fx-aqua-dark mr-2 mb-2 rounded cursor-pointer">
+          <p
+            className={clsx(
+              "inline py-2 px-3 rounded cursor-pointer",
+              "text-fx-aqua bg-fx-aqua-dark text-sm"
+            )}
+          >
             {tag}
           </p>
         );
