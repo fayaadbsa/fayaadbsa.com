@@ -7,7 +7,7 @@ import AppLayout from "@/components/layout/AppLayout";
 
 const HomePage = () => {
   return (
-    <AppLayout>
+    <AppLayout className="flex flex-col gap-32">
       <IntroSection />
       <ProjectsSection />
       <BlogsSection />

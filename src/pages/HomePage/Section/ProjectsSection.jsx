@@ -8,7 +8,7 @@ const ProjectsSection = () => {
   const [currentProject, setCurrentProject] = useState(PROJECTS_DATA[0]);
 
   return (
-    <div className="flex flex-col pb-32" id={lang.project.id}>
+    <div className="flex flex-col" id={lang.project.id}>
       <div className="flex items-center">
         <div className="border-b border-fx-orange w-14 mr-6" />
         <span className="text-3xl font-light text-fx-linear-orange-yellow">

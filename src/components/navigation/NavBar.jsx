@@ -9,7 +9,7 @@ import clsx from "clsx";
 
 const NavMenu = ({ isOnePage = false }) => {
   return (
-    <div className="hidden md:flex md:items-center md:text-center md:list-none">
+    <div className="hidden md:flex md:items-center md:text-center md:list-none transition-all">
       {NAVBAR_DATA.map((item) => {
         return isOnePage ? (
           <LinkScroll
@@ -28,7 +28,7 @@ const NavMenu = ({ isOnePage = false }) => {
         ) : (
           <NavLink
             to={item.path}
-            className={({ isActive, isPending }) =>
+            className={({ isActive }) =>
               clsx(
                 "flex items-center h-full cursor-pointer tracking-wider px-6",
                 isActive

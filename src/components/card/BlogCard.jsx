@@ -4,6 +4,7 @@ import { BsClockHistory } from "react-icons/bs";
 import moment from "moment";
 import { lang } from "@/data/lang";
 import Tags from "@/components/badge/Tags";
+import { Link } from "react-router-dom";
 
 const BlogCard = (props) => {
   const { blog } = props;
@@ -20,15 +21,10 @@ const BlogCard = (props) => {
           className="rounded-lg w-full h-36 object-cover mt-auto"
         />
       </div>
-      <a
-        href={blog.url}
-        target="_blank"
-        rel="noreferrer"
-        className="fx-link font-bold"
-      >
+      <Link to={blog.url} target="_blank" className="fx-link text-lg font-bold min-h-[56px]">
         {blog.title}
-      </a>
-      <div className="inline-flex items-center mt-2 text-sm text-fx-white-sec">
+      </Link>
+      <div className="inline-flex items-center mt-2 text-sm text-fx-white">
         <FaRegCalendar color="#F2F2F2" className="mr-2" />
         <span>{`${moment(blog.dateCreated).format("MMM DD, YYYY")}`}</span>
         <BsClockHistory className="ml-4 mr-2" />
@@ -46,7 +42,7 @@ const BlogCard = (props) => {
           maxWidth: "100%",
           display: "-webkit-box",
           WebkitBoxOrient: "vertical",
-          WebkitLineClamp: 3,
+          WebkitLineClamp: 2,
           overflow: "hidden",
           textOverflow: "ellipsis",
         }}

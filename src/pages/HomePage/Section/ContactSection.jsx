@@ -1,27 +1,40 @@
 import React from "react";
 import { lang } from "@/data/lang";
+import clsx from "clsx";
+import { Link } from "react-router-dom";
 
 const ContactSection = () => {
   return (
-    <div className="flex flex-col pb-20" id="contact">
+    <div className="flex flex-col" id={lang.contact.id}>
       <div className="flex items-center">
         <div className="border-b border-fx-orange w-14 mr-6" />
         <span className="text-3xl font-light text-fx-linear-orange-yellow">
           {lang.contact.title}
         </span>
       </div>
-      <div className="fx-border py-10 px-16 mt-9 rounded-lg text-fx-white">
-        <p>
-          {lang.contact.description.first}
+      <div
+        className={clsx(
+          "fx-border mt-9 rounded-lg",
+          "py-6 px-6 text-lg",
+          "sm:py-10 sm:px-16 sm:text-2xl",
+          "text-fx-grey-light font-medium tracking-[-0.5px]"
+        )}
+      >
+        <span>
+          I'm always excited to find new{" "}
+          <span className="text-fx-white-sec">creative</span> website projects.
+          If you have something you think we can{" "}
+          <span className="text-fx-white-sec">work on</span> together, drop me a{" "}
+          <span className="text-fx-white-sec">message!</span>
           <br />
           <br />
-          {lang.contact.description.second}
-          <span className="text-fx-linear-orange-yellow-aqua font-bold ml-2">
-            <a href={lang.contact.description.email}>
-              {lang.contact.description.third}
-            </a>
+          Feel free to <span className="text-fx-white-sec">reach</span> me on
+          <span className="text-fx-linear-orange-yellow-aqua font-bold ml-2 break-all">
+            <Link to={lang.contact.description.link}>
+              {lang.contact.description.email}
+            </Link>
           </span>
-        </p>
+        </span>
       </div>
     </div>
   );

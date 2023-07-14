@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { CONTACTS_DATA } from "@/data/ContactsData";
+import { Link } from "react-router-dom";
 
 const FloatBar = () => {
   const [offsetY, setOffsetY] = useState(0);
@@ -22,15 +23,14 @@ const FloatBar = () => {
       <div className="flex flex-col items-end">
         {CONTACTS_DATA.map((item) => {
           return (
-            <a
-              href={item.url}
-              aria-label={item.name}
+            <Link
+              to={item.url}
               target="_blank"
               rel="noreferrer"
-              className="mb-6 hover:drop-shadow-fx-soft"
+              className="mb-6 hover:drop-shadow-fx-soft transition-all"
             >
               {item.icons}
-            </a>
+            </Link>
           );
         })}
       </div>
