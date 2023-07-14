@@ -8,7 +8,6 @@ import { BLOGS_DATA } from "@/data/BlogsData";
 import BlogCard from "@/components/card/BlogCard";
 
 const ProjectPage = () => {
-  const [currentProject, setCurrentProject] = useState(PROJECTS_DATA[0]);
 
   return (
     <AppLayout>
