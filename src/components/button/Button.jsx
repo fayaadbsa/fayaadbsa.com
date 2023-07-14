@@ -1,25 +1,29 @@
+import clsx from "clsx";
 import React from "react";
 
-const Button = (props) => {
-  const { isLink = false, href, className, transition = "pop" } = props;
-
+const Button = ({ className, children }) => {
   return (
     <button
-      className={`${
-        transition === "pop" ? `fx-button` : `fx-border`
-      } text-fx-linear-orange-yellow rounded-lg py-4 px-8 
-        text-xl`}
-    >
-      {isLink ? (
-        <span
-          className={`${transition === "slide" && `fx-link`} ${className}`}
-          {...props}
-        >
-          {props.children}
-        </span>
-      ) : (
-        props.children
+      className={clsx(
+        "flex rounded-lg p-0.5",
+        "bg-gradient-to-r from-fx-orange to-fx-yellow",
+        // "hover:from-fx-yellow hover:to-fx-aqua",
+        "hover:-translate-y-1 hover:shadow-fx-yellow",
+        "transition-all duration-200",
+        className
       )}
+    >
+      <span className="bg-fx-background py-4 px-8 rounded-md">
+        <span
+          className={clsx(
+            "text-fx-linear-orange-yellow text-xl font-medium"
+            // "hover:from-fx-yellow hover:to-fx-aqua",
+            // "transition-all"
+          )}
+        >
+          {children}
+        </span>
+      </span>
     </button>
   );
 };

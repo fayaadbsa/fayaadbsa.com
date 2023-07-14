@@ -4,6 +4,8 @@ import { BsClockHistory } from "react-icons/bs";
 import moment from "moment";
 import { lang } from "@/data/lang";
 import Tags from "@/components/badge/Tags";
+import { Link } from "react-router-dom";
+import clsx from "clsx";
 
 const BlogCard = (props) => {
   const { blog } = props;
@@ -11,24 +13,26 @@ const BlogCard = (props) => {
   return (
     <div
       key={blog.id}
-      className="flex flex-col border-2 border-fx-orange basis-1/3 p-6 mt-6 rounded-lg"
+      className={clsx(
+        "flex flex-col gap-2 border-2 bg-fx-background border-fx-orange",
+        "basis-1/3 p-6 mt-6 rounded-lg"
+      )}
     >
-      <div className="rounded-lg -mt-12 mb-6 z-10">
+      <div className="rounded-lg -mt-12 z-10">
         <img
           src={blog.imageUrl}
           alt={blog.imageAlt}
           className="rounded-lg w-full h-36 object-cover mt-auto"
         />
       </div>
-      <a
-        href={blog.url}
+      <Link
+        to={blog.url}
         target="_blank"
-        rel="noreferrer"
-        className="fx-link font-bold"
+        className="fx-link mt-4 text-lg font-bold min-h-[56px]"
       >
         {blog.title}
-      </a>
-      <div className="inline-flex items-center mt-2 text-sm text-fx-white-sec">
+      </Link>
+      <div className="inline-flex items-center text-sm text-fx-white">
         <FaRegCalendar color="#F2F2F2" className="mr-2" />
         <span>{`${moment(blog.dateCreated).format("MMM DD, YYYY")}`}</span>
         <BsClockHistory className="ml-4 mr-2" />
@@ -37,7 +41,7 @@ const BlogCard = (props) => {
           {lang.blog.card.minRead}
         </span>
       </div>
-      <div className="flex flex-wrap mt-2">
+      <div className="flex flex-wrap gap-2">
         <Tags tags={blog.tags} />
       </div>
       <p
@@ -46,7 +50,7 @@ const BlogCard = (props) => {
           maxWidth: "100%",
           display: "-webkit-box",
           WebkitBoxOrient: "vertical",
-          WebkitLineClamp: 3,
+          WebkitLineClamp: 2,
           overflow: "hidden",
           textOverflow: "ellipsis",
         }}

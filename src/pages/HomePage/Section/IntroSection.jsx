@@ -3,14 +3,26 @@ import ProfilePicture from "@/images/fayaad.png";
 import Button from "@/components/button/Button";
 import { lang } from "@/data/lang";
 import { Link } from "react-router-dom";
+import clsx from "clsx";
+import { useInView } from "react-intersection-observer";
 
 const IntroSection = () => {
+  const { ref, inView, entry } = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <div
-      className="flex flex-col-reverse items-start lg:items-center justify-between py-32 lg:flex-row"
       id={lang.intro.id}
+      ref={ref}
+      className={clsx(
+        "flex flex-col-reverse lg:flex-row",
+        "items-start lg:items-center justify-between",
+        "min-h-[60vh] transition-all duration-700",
+        inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+      )}
     >
-      <div className="flex flex-col w-full lg:w-[410px]">
+      <div className="flex flex-col w-full lg:w-[430px]">
         <p className="text-5xl sm:text-6xl text-fx-white self-center">
           {lang.intro.title.greet}
           <span className="font-bold text-fx-linear-orange-yellow-aqua">
@@ -23,7 +35,7 @@ const IntroSection = () => {
             {lang.intro.subtitle}
           </span>
         </div>
-        <div className="text-lg mt-6 text-fx-grey ml-0 lg:ml-20">
+        <div className="text-xl mt-6 text-fx-grey-light ml-0 lg:ml-20">
           {lang.intro.description}
         </div>
         <div className="mt-16">

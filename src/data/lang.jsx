@@ -8,9 +8,9 @@ export const lang = {
       greet: "Hi, I'm ",
       name: "Fayaad",
     },
-    subtitle: "A Website Enthusiast.",
+    subtitle: "A Website Enthusiast",
     description:
-      "I also love to play online games 🎮, watch movies 🎥, and travel ⛰",
+      "I also love to play online games 👾 and watch movies 🍿",
     resume: {
       label: "Get My Resume",
       link: "https://ristek.link/fayaadbsa-cv",
@@ -38,13 +38,14 @@ export const lang = {
     },
   },
   contact: {
+    id: "contact",
     title: "Contact Me!",
     description: {
       first:
         "I'm always excited to find new creative website projects. If you have something you think we can work on together, drop me a message! I'm available for freelance projects or part-time employment.",
       second: "Feel free to reach me on",
-      third: "fayet256@gmail.com",
-      email: "mailto:fayet256@gmail.com",
+      email: "fayet256@gmail.com",
+      link: "mailto:fayet256@gmail.com",
     },
   },
   footer: {

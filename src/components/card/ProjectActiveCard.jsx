@@ -17,22 +17,22 @@ const ProjectActiveCard = (props) => {
           alt={project.alt}
         />
       </div>
-      <div className="flex flex-col mt-6 lg:mt-0">
+      <div className="flex flex-col gap-6 lg:mt-0">
         <div>
           <p className="inline font-bold text-fx-linear-orange-yellow-aqua text-3xl">
             {project.title}
           </p>
         </div>
-        <div className="flex flex-wrap mt-6">
+        <div className="flex flex-wrap gap-2">
           <Tags tags={project.tagIds} />
         </div>
-        <div className="mt-6 font-light text-fx-grey">
+        <div className="font-light text-fx-grey">
           {`${moment(project.startDate).format("MMMM YYYY")} - ${moment(
             project.endDate
           ).format("MMMM YYYY")}`}
         </div>
         <p
-          className="mt-6 text-lg text-fx-white"
+          className="text-lg text-fx-white"
           style={{
             maxWidth: "100%",
             display: "-webkit-box",
@@ -44,7 +44,7 @@ const ProjectActiveCard = (props) => {
         >
           {project.desc}
         </p>
-        <div className="mt-6">
+        <div className="">
           <Link to={project.websiteUrl} target="_blank">
             <Button>{lang.project.button.label}</Button>
           </Link>

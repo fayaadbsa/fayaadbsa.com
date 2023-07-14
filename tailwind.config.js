@@ -1,20 +1,12 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("./src/styles/colors");
 
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        "fx-white": "#FFFFFF",
-        "fx-white-sec": "#F2F2F2",
-        "fx-grey": "#959595",
-        "fx-grey-dark": "#4F4F4F",
-        "fx-black": "#191919",
-        "fx-yellow": "#FFBB14",
-        "fx-orange-yellow": "#FDA822",
-        "fx-orange": "#FF8E2B",
-        "fx-aqua": "#60D1C0",
-        "fx-aqua-dark": "#1D2E2C",
+        ...colors,
       },
       fontFamily: {
         "dancing-script": ["Dancing Script", ...defaultTheme.fontFamily.sans],
@@ -33,6 +25,9 @@ module.exports = {
       },
       dropShadow: {
         "fx-soft": "0px 0px 15px rgba(255, 187, 20, 0.8)",
+      },
+      boxShadow: {
+        "fx-yellow": `0 8px 12px -8px ${colors["fx-yellow"]}`,
       },
     },
   },
