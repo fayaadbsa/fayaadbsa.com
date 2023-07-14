@@ -10,7 +10,7 @@ const MobileBar = (props) => {
     <div
       onClick={handleSidebar}
       className={`fixed z-50 w-full h-full grid items-center left-0
-        ease-in-out duration-300 bg-fx-black
+        ease-in-out duration-300 bg-fx-background
         ${isOpen ? "opacity-100 top-0" : "opacity-0 -top-full"}`}
     >
       <div

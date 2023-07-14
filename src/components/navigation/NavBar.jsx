@@ -53,7 +53,7 @@ const NavBar = (props) => {
   };
 
   return (
-    <nav className="flex sticky items-center justify-between h-16 top-0 -mt-16 px-4 z-30 bg-fx-black">
+    <nav className="flex sticky items-center justify-between h-16 top-0 -mt-16 px-4 z-30 bg-fx-background">
       <LinkRouter
         to="/"
         onClick={toggleHome}
