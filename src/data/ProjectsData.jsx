@@ -1,12 +1,22 @@
+import wceImg from "../images/projects/wce.png";
 import paypeweImg from "../images/projects/paypewe.png";
 import educovidImg from "../images/projects/educovid.png";
 import debatehallImg from "../images/projects/debatehall.png";
 import stacoImg from "../images/projects/staco.png";
 import siruco6Img from "../images/projects/siruco6.png";
 
-export const PROJECTS_DATA = [
+const PROJECTS_DATA_RAW = [
   {
-    id: 1,
+    img: wceImg,
+    alt: "WCE Website",
+    title: "Woman Career Expo by UI WIB",
+    desc: "Weekend Career Expo by UI Women in Business aims to not only help graduates and students find the right job, but also to help employers acquire top-notch human resources. This web has several features such as Job Expo, Event Registration, and Authentication deployed using Google Cloud Platform.",
+    websiteUrl: "https://uiwomeninbusiness.com/",
+    startDate: "2023-02",
+    endDate: "2023-07",
+    tagIds: ["ReactJS", "TailwindCSS", "Django", "PostgreSQL", "Google Cloud Platform"],
+  },
+  {
     img: paypeweImg,
     alt: "Paypewe Website",
     title: "Paypewe",
@@ -17,7 +27,16 @@ export const PROJECTS_DATA = [
     tagIds: ["Django", "jQuery", "Bootstrap", "TDD", "Ajax"],
   },
   {
-    id: 2,
+    img: paypeweImg,
+    alt: "Paypewe Website",
+    title: "Paypewe",
+    desc: "Paypewe is my first personal portfolio website built with Django, jQuery and Bootstrap. This web has several features such as CRUD, Ajax and authentication which are deployed using Heroku.",
+    websiteUrl: "https://paypewe.herokuapp.com/",
+    startDate: "2020-07",
+    endDate: "2020-10",
+    tagIds: ["Django", "jQuery", "Bootstrap", "TDD", "Ajax"],
+  },
+  {
     img: educovidImg,
     alt: "Educovid Website",
     title: "Educovid",
@@ -28,7 +47,6 @@ export const PROJECTS_DATA = [
     tagIds: ["Django", "jQuery", "Bootstrap", "TDD", "Ajax"],
   },
   {
-    id: 3,
     img: stacoImg,
     alt: "STACO Website",
     title: "STACO",
@@ -39,7 +57,6 @@ export const PROJECTS_DATA = [
     tagIds: ["Spring Boot", "Bootstrap"],
   },
   {
-    id: 4,
     img: siruco6Img,
     alt: "SIRUCO Website",
     title: "SIRUCO",
@@ -50,7 +67,6 @@ export const PROJECTS_DATA = [
     tagIds: ["PostgeSQL", "Django", "Bootstrap", "Ajax"],
   },
   {
-    id: 5,
     img: debatehallImg,
     alt: "DebateHall Website",
     title: "DebateHall",
@@ -61,3 +77,8 @@ export const PROJECTS_DATA = [
     tagIds: ["Django", "Bootstrap"],
   },
 ];
+
+export const PROJECTS_DATA = PROJECTS_DATA_RAW.map((project, id) => ({
+  id: id,
+  ...project,
+}));
