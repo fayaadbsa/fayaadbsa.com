@@ -27,16 +27,6 @@ const PROJECTS_DATA_RAW = [
     tagIds: ["Django", "jQuery", "Bootstrap", "TDD", "Ajax"],
   },
   {
-    img: paypeweImg,
-    alt: "Paypewe Website",
-    title: "Paypewe",
-    desc: "Paypewe is my first personal portfolio website built with Django, jQuery and Bootstrap. This web has several features such as CRUD, Ajax and authentication which are deployed using Heroku.",
-    websiteUrl: "https://paypewe.herokuapp.com/",
-    startDate: "2020-07",
-    endDate: "2020-10",
-    tagIds: ["Django", "jQuery", "Bootstrap", "TDD", "Ajax"],
-  },
-  {
     img: educovidImg,
     alt: "Educovid Website",
     title: "Educovid",
