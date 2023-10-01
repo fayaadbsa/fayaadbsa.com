@@ -1,3 +1,4 @@
+import { Navigate } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import ProjectPage from "./pages/ProjectPage/ProjectPage";
 
@@ -12,7 +13,7 @@ const routes = [
   },
   {
     path: "*",
-    element: <HomePage />,
+    element: <Navigate to="/" />
   },
 ];
 
