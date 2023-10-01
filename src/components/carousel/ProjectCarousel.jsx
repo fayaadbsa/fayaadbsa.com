@@ -4,7 +4,7 @@ import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
-import ProjectCard from "../card/ProjectCard";
+import ProjectThumbnailCard from "../card/ProjectThumbnailCard";
 
 const ProjectCarousel = (props) => {
   const { projects, currentProject, setCurrentProject } = props;
@@ -44,7 +44,7 @@ const ProjectCarousel = (props) => {
           {projects.slice(0, 6).map((project, index) => {
             return (
               <SwiperSlide className="!w-56 !h-20">
-                <ProjectCard
+                <ProjectThumbnailCard
                   index={index}
                   project={project}
                   setCurrentProjectId={setCurrentProjectId}

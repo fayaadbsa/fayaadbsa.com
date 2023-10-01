@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProjectCard = (props) => {
+const ProjectThumbnailCard = (props) => {
   const { project, index, setCurrentProjectId, isActive } = props;
 
   return (
@@ -22,4 +22,4 @@ const ProjectCard = (props) => {
   );
 };
 
-export default ProjectCard;
+export default ProjectThumbnailCard;
