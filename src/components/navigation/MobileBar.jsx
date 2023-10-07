@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
-import { MENUS } from "@/data/NavbarData";
+import { MENUS } from "@/data/menu";
 import { NavLink } from "react-router-dom";
 import clsx from "clsx";
 

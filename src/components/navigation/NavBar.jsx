@@ -2,7 +2,7 @@ import React from "react";
 import { animateScroll as scroll } from "react-scroll";
 import { NavLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
-import { MENUS } from "@/data/NavbarData";
+import { MENUS } from "@/data/menu";
 import Logo from "../logo/Logo";
 import clsx from "clsx";
 
