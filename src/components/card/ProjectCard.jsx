@@ -7,12 +7,22 @@ import Tags from "@/components/tag/Tags";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
 
-const BlogCard = (props) => {
-  const { blog } = props;
+const ProjectCard = ({ project }) => {
+  const {
+    id,
+    image,
+    imageAlt,
+    title,
+    description,
+    websiteUrl,
+    startDate,
+    endDate,
+    tags,
+  } = project;
 
   return (
     <div
-      key={blog.id}
+      key={id}
       className={clsx(
         "flex flex-col gap-2 border-2 bg-fx-background border-fx-orange",
         "basis-1/3 p-6 mt-6 rounded-lg"
@@ -20,30 +30,33 @@ const BlogCard = (props) => {
     >
       <div className="rounded-lg -mt-12 z-10">
         <img
-          src={blog.imageUrl}
-          alt={blog.imageAlt}
+          src={image}
+          alt={imageAlt}
           className="rounded-lg w-full h-36 object-cover mt-auto"
         />
       </div>
       <Link
-        to={blog.url}
+        to={websiteUrl}
         target="_blank"
-        className="fx-link mt-4 text-lg font-bold min-h-[56px]"
+        className="fx-link mt-4 text-lg font-bold"
       >
-        {blog.title}
+        {title}
       </Link>
       <div className="inline-flex items-center text-sm text-fx-white">
         <FaRegCalendar color="#F2F2F2" className="mr-2" />
-        <span>{`${moment(blog.dateCreated).format("MMM DD, YYYY")}`}</span>
-        <BsClockHistory className="ml-4 mr-2" />
+        {`${moment(startDate).format("MMMM YYYY")} - ${moment(
+          endDate
+        ).format("MMMM YYYY")}`}
+        {/* <span>{`${moment(dateCreated).format("MMM DD, YYYY")}`}</span> */}
+        {/* <BsClockHistory className="ml-4 mr-2" />
         <span>
-          {blog.timeToRead}
+          {timeToRead}
           {lang.blog.card.minRead}
-        </span>
+        </span> */}
       </div>
-      <Tags tags={blog.tags} />
+      <Tags tags={tags} />
       <p
-        className="text-sm text-fx-white"
+        className="text-sm text-fx-white mt-auto"
         style={{
           maxWidth: "100%",
           display: "-webkit-box",
@@ -53,10 +66,10 @@ const BlogCard = (props) => {
           textOverflow: "ellipsis",
         }}
       >
-        {blog.description}
+        {description}
       </p>
     </div>
   );
 };
 
-export default BlogCard;
+export default ProjectCard;

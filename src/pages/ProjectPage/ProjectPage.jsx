@@ -1,14 +1,9 @@
 import React, { useState } from "react";
 import AppLayout from "@/components/layout/AppLayout";
-import ProjectActiveCard from "@/components/card/ProjectActiveCard";
-import ProjectCarousel from "@/components/carousel/ProjectCarousel";
+import ProjectCard from "@/components/card/ProjectCard";
 import { PROJECTS_DATA } from "@/data/ProjectsData";
-import { lang } from "@/data/lang";
-import { BLOGS_DATA } from "@/data/BlogsData";
-import BlogCard from "@/components/card/BlogCard";
 
 const ProjectPage = () => {
-
   return (
     <AppLayout>
       <div className="flex flex-col">
@@ -17,9 +12,9 @@ const ProjectPage = () => {
             Projects
           </span>
         </div>
-        <div className="flex mt-9 justify-between gap-4 flex-col md:flex-row">
-          {BLOGS_DATA.map((blog) => (
-            <BlogCard blog={blog} />
+        <div className="grid grid-cols-1 lg:grid-cols-3 mt-9 gap-8">
+          {PROJECTS_DATA.map((project) => (
+            <ProjectCard project={project} />
           ))}
         </div>
       </div>

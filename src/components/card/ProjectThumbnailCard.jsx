@@ -1,7 +1,12 @@
 import React from "react";
 
-const ProjectThumbnailCard = (props) => {
-  const { project, index, setCurrentProjectId, isActive } = props;
+const ProjectThumbnailCard = ({
+  project,
+  index,
+  setCurrentProjectId,
+  isActive,
+}) => {
+  const { image, title } = project;
 
   return (
     <div
@@ -12,11 +17,11 @@ const ProjectThumbnailCard = (props) => {
       <div
         className="!bg-cover bg-top rounded-lg h-full py-6 brightness-50"
         style={{
-          backgroundImage: `url(${project.img})`,
+          backgroundImage: `url(${image})`,
         }}
       ></div>
       <p className="relative -top-1/2 -translate-y-1/2 z-10 font-semibold text-fx-white">
-        {project.title}
+        {title}
       </p>
     </div>
   );
