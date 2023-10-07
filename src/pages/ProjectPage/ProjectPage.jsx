@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AppLayout from "@/components/layout/AppLayout";
 import ProjectCard from "@/components/card/ProjectCard";
-import { PROJECTS_DATA } from "@/data/ProjectsData";
+import { PROJECTS } from "@/data/ProjectsData";
 
 const ProjectPage = () => {
   return (
@@ -13,7 +13,7 @@ const ProjectPage = () => {
           </span>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 mt-9 gap-8">
-          {PROJECTS_DATA.map((project) => (
+          {PROJECTS.map((project) => (
             <ProjectCard project={project} />
           ))}
         </div>

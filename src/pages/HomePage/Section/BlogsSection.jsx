@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "@/components/button/Button";
 import { lang } from "@/data/lang";
-import { BLOGS_DATA } from "@/data/BlogsData";
+import { BLOGS } from "@/data/BlogsData";
 import BlogCard from "@/components/card/BlogCard";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
@@ -28,7 +28,7 @@ const BlogsSection = () => {
         </span>
       </div>
       <div className="flex mt-9 justify-between gap-4 flex-col md:flex-row">
-        {BLOGS_DATA.map((blog) => (
+        {BLOGS.map((blog) => (
           <BlogCard blog={blog} />
         ))}
       </div>

@@ -1,4 +1,4 @@
-export const BLOGS_DATA = [
+export const BLOGS = [
   {
     id: "1",
     title: "Mari Menggunakan Git Version Control dengan Baik",

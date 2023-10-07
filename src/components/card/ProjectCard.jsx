@@ -9,7 +9,6 @@ import clsx from "clsx";
 
 const ProjectCard = ({ project }) => {
   const {
-    id,
     image,
     imageAlt,
     title,
@@ -22,7 +21,6 @@ const ProjectCard = ({ project }) => {
 
   return (
     <div
-      key={id}
       className={clsx(
         "flex flex-col gap-2 border-2 bg-fx-background border-fx-orange",
         "basis-1/3 p-6 mt-6 rounded-lg"
@@ -44,9 +42,9 @@ const ProjectCard = ({ project }) => {
       </Link>
       <div className="inline-flex items-center text-sm text-fx-white">
         <FaRegCalendar color="#F2F2F2" className="mr-2" />
-        {`${moment(startDate).format("MMMM YYYY")} - ${moment(
-          endDate
-        ).format("MMMM YYYY")}`}
+        {`${moment(startDate).format("MMMM YYYY")} - ${moment(endDate).format(
+          "MMMM YYYY"
+        )}`}
         {/* <span>{`${moment(dateCreated).format("MMM DD, YYYY")}`}</span> */}
         {/* <BsClockHistory className="ml-4 mr-2" />
         <span>

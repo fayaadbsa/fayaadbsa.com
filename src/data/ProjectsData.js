@@ -5,22 +5,30 @@ import debatehallImg from "../images/projects/debatehall.png";
 import stacoImg from "../images/projects/staco.png";
 import siruco6Img from "../images/projects/siruco6.png";
 
-const PROJECTS_DATA_RAW = [
+export const PROJECTS = [
   {
     image: wceImg,
     imageAlt: "WCE Website",
     title: "Woman Career Expo by UI WIB",
-    description: "Weekend Career Expo by UI Women in Business aims to not only help graduates and students find the right job, but also to help employers acquire top-notch human resources. This web has several features such as Job Expo, Event Registration, and Authentication deployed using Google Cloud Platform.",
+    description:
+      "Weekend Career Expo by UI Women in Business aims to not only help graduates and students find the right job, but also to help employers acquire top-notch human resources. This web has several features such as Job Expo, Event Registration, and Authentication deployed using Google Cloud Platform.",
     websiteUrl: "https://uiwomeninbusiness.com/",
     startDate: "2023-02",
     endDate: "2023-07",
-    tags: ["ReactJS", "TailwindCSS", "Django", "PostgreSQL", "Google Cloud Platform"],
+    tags: [
+      "ReactJS",
+      "TailwindCSS",
+      "Django",
+      "PostgreSQL",
+      "Google Cloud Platform",
+    ],
   },
   {
     image: paypeweImg,
     imageAlt: "Paypewe Website",
     title: "Paypewe",
-    description: "Paypewe is my first personal portfolio website built with Django, jQuery and Bootstrap. This web has several features such as CRUD, Ajax and authentication which are deployed using Heroku.",
+    description:
+      "Paypewe is my first personal portfolio website built with Django, jQuery and Bootstrap. This web has several features such as CRUD, Ajax and authentication which are deployed using Heroku.",
     websiteUrl: "https://paypewe.herokuapp.com/",
     startDate: "2020-07",
     endDate: "2020-10",
@@ -30,7 +38,8 @@ const PROJECTS_DATA_RAW = [
     image: educovidImg,
     imageAlt: "Educovid Website",
     title: "Educovid",
-    description: "Educovid is a group website project for programming and web development courses. Themed to provide education about covid-19, this website was created using Django, Bootstrap and JQuery.",
+    description:
+      "Educovid is a group website project for programming and web development courses. Themed to provide education about covid-19, this website was created using Django, Bootstrap and JQuery.",
     websiteUrl: "https://educovid.herokuapp.com/",
     startDate: "2020-10",
     endDate: "2021-01",
@@ -40,7 +49,8 @@ const PROJECTS_DATA_RAW = [
     image: stacoImg,
     imageAlt: "STACO Website",
     title: "STACO",
-    description: "Student-Teaching Assistant Connector (STACO) is a website for connecting lecturer assistants with students to make it easier to schedule assistance and tutoring. Made with spring boot and bootstrap",
+    description:
+      "Student-Teaching Assistant Connector (STACO) is a website for connecting lecturer assistants with students to make it easier to schedule assistance and tutoring. Made with spring boot and bootstrap",
     websiteUrl: "https://staco-b1.herokuapp.com/",
     startDate: "2021-03",
     endDate: "2021-06",
@@ -50,7 +60,8 @@ const PROJECTS_DATA_RAW = [
     image: siruco6Img,
     imageAlt: "SIRUCO Website",
     title: "SIRUCO",
-    description: "SIRUCO is a hospital information system that has CRUD features using vanilla postgresql in the django framework (without using orm).",
+    description:
+      "SIRUCO is a hospital information system that has CRUD features using vanilla postgresql in the django framework (without using orm).",
     websiteUrl: "https://siruco6.herokuapp.com/",
     startDate: "2021-03",
     endDate: "2021-06",
@@ -60,15 +71,11 @@ const PROJECTS_DATA_RAW = [
     image: debatehallImg,
     imageAlt: "DebateHall Website",
     title: "DebateHall",
-    description: "DebateHall is a website for conducting online debates that features debate activities, debate rooms, online courses, and interesting blogs created using django and bootstrap",
+    description:
+      "DebateHall is a website for conducting online debates that features debate activities, debate rooms, online courses, and interesting blogs created using django and bootstrap",
     websiteUrl: "https://debatehall.herokuapp.com/",
     startDate: "2021-08",
     endDate: "2022-01",
     tags: ["Django", "Bootstrap"],
   },
 ];
-
-export const PROJECTS_DATA = PROJECTS_DATA_RAW.map((project, id) => ({
-  id: id,
-  ...project,
-}));

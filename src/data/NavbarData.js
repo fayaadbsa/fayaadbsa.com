@@ -3,7 +3,7 @@ export const NAVBAR_DATA = [
   { label: "Projects", path: "/projects" },
 ];
 
-export const NAVBAR_DATA_ONEPAGE = [
+export const MENU_HOME = [
   { label: "Intro", path: "intro" },
   { label: "Projects", path: "projects" },
   { label: "Blogs", path: "blogs" },
