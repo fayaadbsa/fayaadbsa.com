@@ -9,10 +9,12 @@ const ProjectCard = ({ project }) => {
 
   return (
     <Link
-      to={`/project/${slug}`}
+      // to={`/projects/${slug}`}
+      to={websiteUrl}
+      target="_blank"
       className={clsx(
         "flex flex-col gap-2 border-2 bg-fx-background border-fx-orange",
-        "basis-1/3 p-4 mt-6 rounded-lg"
+        "p-4 mt-6 rounded-lg"
       )}
     >
       <div className="rounded-lg -mt-12 z-10">

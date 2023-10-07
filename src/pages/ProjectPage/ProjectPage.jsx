@@ -1,15 +1,14 @@
-import React, { useState } from "react";
-import AppLayout from "@/components/layout/AppLayout";
+import React from "react";
 import ProjectCard from "@/components/card/ProjectCard";
 import { PROJECTS } from "@/data/ProjectsData";
 import clsx from "clsx";
 
 const ProjectPage = () => {
   return (
-    <AppLayout>
+    <div>
       <div className="flex flex-col">
         <div className="self-center">
-          <span className="text-6xl font-bold text-fx-linear-orange-yellow-aqua">
+          <span className="self-center text-6xl font-bold text-fx-linear-orange-yellow-aqua">
             Projects
           </span>
         </div>
@@ -24,7 +23,7 @@ const ProjectPage = () => {
           ))}
         </div>
       </div>
-    </AppLayout>
+    </div>
   );
 };
 

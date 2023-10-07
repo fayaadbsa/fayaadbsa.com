@@ -5,8 +5,10 @@ import FloatBar from "@/components/navigation/FloatBar";
 import Backgrounds from "@/components/background/Backgrounds";
 import Footer from "@/components/footer/Footer";
 import clsx from "clsx";
+import { Outlet } from "react-router-dom";
+import ScrollToTop from "../ScrollToTop";
 
-const AppLayout = ({ children, className }) => {
+const AppLayout = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleSidebar = () => {
@@ -15,6 +17,7 @@ const AppLayout = ({ children, className }) => {
 
   return (
     <div>
+      <ScrollToTop />
       <NavBar handleSidebar={handleSidebar} />
       <MobileBar isOpen={isOpen} handleSidebar={handleSidebar} />
       <FloatBar />
@@ -24,7 +27,8 @@ const AppLayout = ({ children, className }) => {
           className
         )}
       >
-        {children}
+        {/* {children} */}
+        <Outlet />
       </div>
       {/* <Footer /> */}
       <Backgrounds />
