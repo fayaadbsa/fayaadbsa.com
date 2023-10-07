@@ -3,11 +3,13 @@ import Tag from "./Tag";
 
 const Tags = ({ tags }) => {
   return (
-    <div className="flex flex-wrap gap-2">
-      {tags.map((tag) => {
-        return <Tag tag={tag} />;
-      })}
-    </div>
+    tags?.length > 0 && (
+      <div className="flex flex-wrap gap-2">
+        {tags.map((tag) => {
+          return <Tag tag={tag} />;
+        })}
+      </div>
+    )
   );
 };
 

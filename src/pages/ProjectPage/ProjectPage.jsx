@@ -12,7 +12,7 @@ const ProjectPage = () => {
             Projects
           </span>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 mt-9 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-9 gap-x-6 gap-y-10">
           {PROJECTS.map((project) => (
             <ProjectCard project={project} />
           ))}
