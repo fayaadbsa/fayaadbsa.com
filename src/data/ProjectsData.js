@@ -89,3 +89,6 @@ export const PROJECTS = [
     tags: [TAG_ENUM.DJ, TAG_ENUM.BS],
   },
 ];
+
+const PROJECT_MAIN_SLUG = "weekend-career-expo";
+export const PROJECT_MAIN = PROJECTS.find((p) => p.slug === PROJECT_MAIN_SLUG);
