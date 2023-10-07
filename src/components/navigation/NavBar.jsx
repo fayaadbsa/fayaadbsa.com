@@ -2,31 +2,9 @@ import React from "react";
 import { animateScroll as scroll } from "react-scroll";
 import { NavLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
-import { NAVBAR_DATA } from "@/data/NavbarData";
+import { MENUS } from "@/data/NavbarData";
 import Logo from "../logo/Logo";
 import clsx from "clsx";
-
-const NavMenu = () => {
-  return (
-    <div className="hidden md:flex md:items-center md:text-center md:list-none transition-all">
-      {NAVBAR_DATA.map((item) => (
-        <NavLink
-          to={item.path}
-          className={({ isActive }) =>
-            clsx(
-              "flex items-center h-full cursor-pointer tracking-wider px-6",
-              isActive
-                ? "text-fx-yellow fx-neon-active"
-                : "text-white fx-neon-hover"
-            )
-          }
-        >
-          {item.label}
-        </NavLink>
-      ))}
-    </div>
-  );
-};
 
 const NavBar = (props) => {
   const { handleSidebar } = props;
@@ -44,7 +22,21 @@ const NavBar = (props) => {
       >
         <Logo />
       </NavLink>
-      <NavMenu />
+      <div className="hidden md:flex md:items-center md:text-center md:list-none transition-all">
+        {MENUS.map((item) => (
+          <NavLink
+            to={item.path}
+            className={({ isActive }) =>
+              clsx(
+                "flex items-center h-full cursor-pointer tracking-wider text-fx-white px-6",
+                isActive ? "text-fx-yellow fx-neon-active" : "fx-neon-hover"
+              )
+            }
+          >
+            {item.label}
+          </NavLink>
+        ))}
+      </div>
       <div>
         <FaBars
           size={30}
