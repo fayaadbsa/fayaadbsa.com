@@ -16,21 +16,23 @@ const AppLayout = ({ className }) => {
   };
 
   return (
-    <div className="relative overflow-hidden">
+    <div>
       <ScrollToTop />
       <NavBar handleSidebar={handleSidebar} />
       <MobileBar isOpen={isOpen} handleSidebar={handleSidebar} />
       <FloatBar />
-      <div
-        className={clsx(
-          `max-w-8xl mx-auto py-32 px-4 md:px-16 xl:px-32`,
-          className
-        )}
-      >
-        <Outlet />
+      <div className="relative overflow-hidden">
+        <div
+          className={clsx(
+            `max-w-8xl mx-auto py-32 px-4 md:px-16 xl:px-32`,
+            className
+          )}
+        >
+          <Outlet />
+        </div>
+        <Footer />
+        <Backgrounds />
       </div>
-      <Footer />
-      <Backgrounds />
     </div>
   );
 };
