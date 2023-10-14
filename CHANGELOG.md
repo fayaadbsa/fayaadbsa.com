@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.3.0](https://github.com/fayaadbsa/fayaadbsa.com/compare/v2.2.0...v2.3.0) (2023-10-14)
+
+
+### Features
+
+* background and footer ([68cb697](https://github.com/fayaadbsa/fayaadbsa.com/commit/68cb697bf306cafddfc531fa8a8ff48f4f839475))
+* tech stack ([6c0627b](https://github.com/fayaadbsa/fayaadbsa.com/commit/6c0627b9657832b513f03388252fe6c5fb0b8d1e))
+
+
+### Bug Fixes
+
+* fix navbar ([2cd25a6](https://github.com/fayaadbsa/fayaadbsa.com/commit/2cd25a60602ee92551571a41109aa927657d69cd))
+
 ## [2.2.0](https://github.com/fayaadbsa/fayaadbsa.com/compare/v2.1.0...v2.2.0) (2023-10-14)
 
 
