@@ -38,7 +38,7 @@ const IntroSection = () => {
         <div className="text-xl mt-6 text-fx-grey-light ml-0 lg:ml-20">
           {lang.intro.description}
         </div>
-        <div className="mt-16">
+        <div className="mt-16 w-fit">
           <Link to={lang.intro.resume.link} target="_blank">
             <Button>{lang.intro.resume.label}</Button>
           </Link>

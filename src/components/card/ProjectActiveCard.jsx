@@ -52,7 +52,7 @@ const ProjectActiveCard = ({ project }) => {
         >
           {description}
         </p>
-        <div className="">
+        <div className="w-fit">
           <Link to={websiteUrl} target="_blank">
             <Button>{lang.project.button.label}</Button>
           </Link>
