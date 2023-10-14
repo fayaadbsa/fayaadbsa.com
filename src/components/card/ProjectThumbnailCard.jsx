@@ -15,7 +15,7 @@ const ProjectThumbnailCard = ({ project, setCurrentProject, isActive }) => {
           backgroundImage: `url(${image})`,
         }}
       ></div>
-      <p className="relative -top-1/2 -translate-y-1/2 z-10 font-semibold text-fx-white">
+      <p className="relative px-4 -top-1/2 -translate-y-1/2 z-10 font-semibold text-fx-white">
         {title}
       </p>
     </div>
