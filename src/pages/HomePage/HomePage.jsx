@@ -6,7 +6,7 @@ import ContactSection from "./Section/ContactSection";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-24">
       <IntroSection />
       <ProjectsSection />
       <BlogsSection />
