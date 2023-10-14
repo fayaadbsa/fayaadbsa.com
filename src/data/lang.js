@@ -8,11 +8,11 @@ export const lang = {
       greet: "Hi, I'm ",
       name: "Fayaad",
     },
-    subtitle: "A Website Enthusiast",
+    subtitle: "Full Stack Developer",
     description:
-      "I also love to play online games 👾 and watch movies 🍿",
+      "I craft user-friendly websites and blending elegant design with efficient functionality 🚀",
     resume: {
-      label: "Get My Resume",
+      label: "Check My Resume",
       link: "https://ristek.link/fayaadbsa-cv",
     },
     picture: {
