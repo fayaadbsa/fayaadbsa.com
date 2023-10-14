@@ -1,19 +1,31 @@
+import { Navigate } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import ProjectPage from "./pages/ProjectPage/ProjectPage";
+import ProjectDetailPage from "./pages/ProjectPage/ProjectDetailPage";
+import AppLayout from "./components/layout/AppLayout";
 
-const routes = [
+export const routes = [
   {
     path: "/",
-    element: <HomePage />,
-  },
-  {
-    path: "/projects",
-    element: <ProjectPage />,
+    element: <AppLayout />,
+    errorElement: <Navigate to="/" />,
+    children: [
+      {
+        path: "",
+        element: <HomePage />,
+      },
+      {
+        path: "projects",
+        element: <ProjectPage />,
+      },
+      {
+        path: "projects/:slug",
+        element: <ProjectDetailPage />,
+      },
+    ],
   },
   {
     path: "*",
-    element: <HomePage />,
+    element: <Navigate to="/" />,
   },
 ];
-
-export default routes;

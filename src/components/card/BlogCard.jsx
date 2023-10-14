@@ -1,49 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaRegCalendar } from "react-icons/fa";
 import { BsClockHistory } from "react-icons/bs";
 import moment from "moment";
 import { lang } from "@/data/lang";
-import Tags from "@/components/badge/Tags";
+import Tags from "@/components/tag/Tags";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
+import Button from "../button/Button";
+import { BUTTON_VARIANT } from "@/utils/enum";
 
-const BlogCard = (props) => {
-  const { blog } = props;
+const BlogCard = ({ blog }) => {
+  const {
+    id,
+    imageUrl,
+    imageAlt,
+    url,
+    title,
+    timeToRead,
+    dateCreated,
+    tags,
+    description,
+  } = blog;
+  const [hover, setHover] = useState(false);
 
   return (
-    <div
-      key={blog.id}
+    <Link
+      key={id}
+      to={url}
+      target="_blank"
+      onMouseOver={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
       className={clsx(
         "flex flex-col gap-2 border-2 bg-fx-background border-fx-orange",
-        "basis-1/3 p-6 mt-6 rounded-lg"
+        "basis-1/3 p-6 mt-6 rounded-lg cursor-pointer"
       )}
     >
       <div className="rounded-lg -mt-12 z-10">
         <img
-          src={blog.imageUrl}
-          alt={blog.imageAlt}
+          src={imageUrl}
+          alt={imageAlt}
           className="rounded-lg w-full h-36 object-cover mt-auto"
         />
       </div>
-      <Link
-        to={blog.url}
-        target="_blank"
-        className="fx-link mt-4 text-lg font-bold min-h-[56px]"
+      <Button
+        className={"mt-4 text-lg font-bold min-h-[56px]"}
+        variant={BUTTON_VARIANT.LINK}
+        hover={hover}
       >
-        {blog.title}
-      </Link>
+        {title}
+      </Button>
       <div className="inline-flex items-center text-sm text-fx-white">
         <FaRegCalendar color="#F2F2F2" className="mr-2" />
-        <span>{`${moment(blog.dateCreated).format("MMM DD, YYYY")}`}</span>
+        <span>{`${moment(dateCreated).format("MMM DD, YYYY")}`}</span>
         <BsClockHistory className="ml-4 mr-2" />
         <span>
-          {blog.timeToRead}
+          {timeToRead}
           {lang.blog.card.minRead}
         </span>
       </div>
-      <div className="flex flex-wrap gap-2">
-        <Tags tags={blog.tags} />
-      </div>
+      <Tags tags={tags} />
       <p
         className="text-sm text-fx-white"
         style={{
@@ -55,9 +70,9 @@ const BlogCard = (props) => {
           textOverflow: "ellipsis",
         }}
       >
-        {blog.description}
+        {description}
       </p>
-    </div>
+    </Link>
   );
 };
 

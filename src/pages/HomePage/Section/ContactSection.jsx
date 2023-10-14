@@ -3,6 +3,8 @@ import { lang } from "@/data/lang";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
+import Button from "@/components/button/Button";
+import { BUTTON_VARIANT } from "@/utils/enum";
 
 const ContactSection = () => {
   const { ref, inView, entry } = useInView({
@@ -43,7 +45,9 @@ const ContactSection = () => {
           Feel free to <span className="text-fx-white-sec">reach</span> me on
           <span className="text-fx-linear-orange-yellow-aqua font-bold ml-2 break-all">
             <Link to={lang.contact.description.link}>
-              {lang.contact.description.email}
+              <Button variant={BUTTON_VARIANT.LINK}>
+                {lang.contact.description.email}
+              </Button>
             </Link>
           </span>
         </span>

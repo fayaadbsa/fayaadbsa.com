@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import ProjectActiveCard from "@/components/card/ProjectActiveCard";
 import ProjectCarousel from "@/components/carousel/ProjectCarousel";
 import { lang } from "@/data/lang";
-import { PROJECTS_DATA } from "@/data/ProjectsData";
+import { PROJECTS } from "@/data/ProjectsData";
 import { useInView } from "react-intersection-observer";
 import clsx from "clsx";
 
 const ProjectsSection = () => {
-  const [currentProject, setCurrentProject] = useState(PROJECTS_DATA[0]);
+  const [currentProject, setCurrentProject] = useState(PROJECTS[0]);
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
   });
@@ -29,7 +29,7 @@ const ProjectsSection = () => {
       </div>
       <ProjectActiveCard project={currentProject} />
       <ProjectCarousel
-        projects={PROJECTS_DATA}
+        projects={PROJECTS}
         currentProject={currentProject}
         setCurrentProject={setCurrentProject}
       />

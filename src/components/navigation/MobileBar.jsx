@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
-import { Link as LinkS } from "react-scroll";
-import { NAVBAR_DATA } from "@/data/NavbarData";
+import Menu from "./Menu";
 
 const MobileBar = (props) => {
   const { handleSidebar, isOpen } = props;
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen]);
 
   return (
     <div
@@ -21,23 +24,7 @@ const MobileBar = (props) => {
         <FaTimes color="white" size={32} />
       </div>
       <div className="grid grid-cols-1 grid-rows-6 gap-6 text-center">
-        {NAVBAR_DATA.map((item) => {
-          return (
-            <LinkS
-              to={item.path}
-              smooth={true}
-              duration={800}
-              spy={true}
-              exact="true"
-              offset={-80}
-              onClick={handleSidebar}
-              className="flex items-center content-center justify-center text-2xl ease-in-out
-              text-fx-white cursor-pointer"
-            >
-              {item.label}
-            </LinkS>
-          );
-        })}
+        <Menu />
       </div>
     </div>
   );

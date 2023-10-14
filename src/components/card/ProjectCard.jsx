@@ -1,24 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
+import Tags from "@/components/tag/Tags";
+import { Link } from "react-router-dom";
+import clsx from "clsx";
+import Button from "../button/Button";
+import { BUTTON_VARIANT } from "@/utils/enum";
 
-const ProjectCard = (props) => {
-  const { project, index, setCurrentProjectId, isActive } = props;
+const ProjectCard = ({ project }) => {
+  const { image, imageAlt, title, slug, description, websiteUrl, tags } =
+    project;
+  const [hover, setHover] = useState(false);
 
   return (
-    <div
-      onClick={() => setCurrentProjectId(index)}
-      className={`text-center rounded-xl cursor-pointer w-56 h-20 mr-4 border-4
-        ${isActive ? "border-fx-orange" : "border-transparent"} `}
+    <Link
+      // to={`/projects/${slug}`}
+      to={websiteUrl}
+      target="_blank"
+      onMouseOver={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      className={clsx(
+        "flex flex-col gap-2 border-2 bg-fx-background border-fx-orange",
+        "p-4 mt-6 rounded-lg"
+      )}
     >
-      <div
-        className="!bg-cover bg-top rounded-lg h-full py-6 brightness-50"
+      <div className="rounded-lg -mt-12 z-10">
+        <img
+          src={image}
+          alt={imageAlt}
+          className="rounded-lg w-full h-50 object-cover mt-auto"
+        />
+      </div>
+      <Button
+        className={"text-lg font-bold"}
+        variant={BUTTON_VARIANT.LINK}
+        hover={hover}
+      >
+        {title}
+      </Button>
+      <div className="overflow-hidden">
+        <Tags tags={tags} />
+      </div>
+      <p
+        className="text-sm text-fx-white mt-auto"
         style={{
-          backgroundImage: `url(${project.img})`,
+          maxWidth: "100%",
+          display: "-webkit-box",
+          WebkitBoxOrient: "vertical",
+          WebkitLineClamp: 2,
+          overflow: "hidden",
+          textOverflow: "ellipsis",
         }}
-      ></div>
-      <p className="relative -top-1/2 -translate-y-1/2 z-10 font-semibold text-fx-white">
-        {project.title}
+      >
+        {description}
       </p>
-    </div>
+    </Link>
   );
 };
 

@@ -4,18 +4,13 @@ import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
-import ProjectCard from "../card/ProjectCard";
+import ProjectThumbnailCard from "../card/ProjectThumbnailCard";
 
 const ProjectCarousel = (props) => {
   const { projects, currentProject, setCurrentProject } = props;
-  const [currentProjectId, setCurrentProjectId] = useState(0);
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
   const swiperRef = useRef();
-
-  useEffect(() => {
-    setCurrentProject(projects[currentProjectId]);
-  }, [currentProjectId, projects, setCurrentProject]);
 
   return (
     <div className="flex flex-row w-full mt-8 items-center">
@@ -41,14 +36,14 @@ const ProjectCarousel = (props) => {
         }}
       >
         <div className="hidden mt-8 md:flex">
-          {projects.slice(0, 6).map((project, index) => {
+          {projects.map((project, index) => {
             return (
               <SwiperSlide className="!w-56 !h-20">
-                <ProjectCard
+                <ProjectThumbnailCard
                   index={index}
                   project={project}
-                  setCurrentProjectId={setCurrentProjectId}
-                  isActive={currentProject.id === project.id}
+                  setCurrentProject={setCurrentProject}
+                  isActive={currentProject.title === project.title}
                 />
               </SwiperSlide>
             );

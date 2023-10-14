@@ -1,29 +1,31 @@
 import clsx from "clsx";
 import React from "react";
+import { BUTTON_VARIANT } from "@/utils/enum";
 
-const Button = ({ className, children }) => {
+const Button = ({
+  className,
+  variant = BUTTON_VARIANT.PRIMARY,
+  hover = false,
+  children,
+}) => {
   return (
     <button
       className={clsx(
-        "flex rounded-lg p-0.5",
-        "bg-gradient-to-r from-fx-orange to-fx-yellow",
-        // "hover:from-fx-yellow hover:to-fx-aqua",
-        "hover:-translate-y-1 hover:shadow-fx-yellow",
-        "transition-all duration-200",
+        variant === BUTTON_VARIANT.PRIMARY && [
+          "flex items-center rounded-lg px-8 h-[60px]",
+          "text-fx-white text-lg font-medium",
+        ],
+        variant === BUTTON_VARIANT.LINK && [
+          "!bg-[length:200%_100%] text-left text-transparent bg-clip-text",
+        ],
+        "bg-gradient-to-r from-fx-orange via-fx-yellow to-fx-aqua",
+        "bg-[length:300%_100%] hover:bg-[100%_0]",
+        hover && "bg-[100%_0]",
+        "transition-all duration-500",
         className
       )}
     >
-      <span className="bg-fx-background py-4 px-8 rounded-md">
-        <span
-          className={clsx(
-            "text-fx-linear-orange-yellow text-xl font-medium"
-            // "hover:from-fx-yellow hover:to-fx-aqua",
-            // "transition-all"
-          )}
-        >
-          {children}
-        </span>
-      </span>
+      {children}
     </button>
   );
 };
