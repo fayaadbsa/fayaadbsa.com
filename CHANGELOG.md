@@ -1,5 +1,39 @@
 # Changelog
 
+## [2.2.0](https://github.com/fayaadbsa/fayaadbsa.com/compare/v2.1.0...v2.2.0) (2023-10-14)
+
+
+### Features
+
+* add padding ([935a2fe](https://github.com/fayaadbsa/fayaadbsa.com/commit/935a2fee7eb6a95a338a876846fe562350327f8b))
+* add project wce ([a742cc5](https://github.com/fayaadbsa/fayaadbsa.com/commit/a742cc504432bd32cba0fee6a4e446adf9429ec3))
+* change menu name ([ce99fce](https://github.com/fayaadbsa/fayaadbsa.com/commit/ce99fce52774b6a0390c04a964b39b731506b46f))
+* extract menu ([4ed589f](https://github.com/fayaadbsa/fayaadbsa.com/commit/4ed589f4e20ef7f1467254d33ecbf3d1aedc7deb))
+* project card ([efb1dbd](https://github.com/fayaadbsa/fayaadbsa.com/commit/efb1dbd9678c2d5210992c85074f2f9e27948f38))
+* project page ([9732176](https://github.com/fayaadbsa/fayaadbsa.com/commit/9732176e6f0441caa6092c8637139b7ba483bf21))
+* project-page list ([73f12ba](https://github.com/fayaadbsa/fayaadbsa.com/commit/73f12ba1c39a95ea9f9aeca9cc0d62d4bef6ad6a))
+* refactor button ([1069c9f](https://github.com/fayaadbsa/fayaadbsa.com/commit/1069c9f59afa1fb2da25504c55cec832a2de5240))
+* refactor navbar ([f4cbfb2](https://github.com/fayaadbsa/fayaadbsa.com/commit/f4cbfb2def7967f133ec836bac9bb6242c5c492d))
+* refactor projects and blogs data ([d5a5ba8](https://github.com/fayaadbsa/fayaadbsa.com/commit/d5a5ba81e3efc16be99a4b317b2ea55004fc1555))
+* remove unused css ([97dc669](https://github.com/fayaadbsa/fayaadbsa.com/commit/97dc669c59413888ffafb40be348e40736833a7d))
+* revamp button ([43532ce](https://github.com/fayaadbsa/fayaadbsa.com/commit/43532cee49547ce870ccd8d0d09f395e941afe7a))
+* update intro ([93a22b9](https://github.com/fayaadbsa/fayaadbsa.com/commit/93a22b990dfad50d6ccf8d42c17ff19dc996e0ef))
+* update navbar ([b3006b9](https://github.com/fayaadbsa/fayaadbsa.com/commit/b3006b9ac66b1a8c49858fbda36384eb23c4152c))
+
+
+### Bug Fixes
+
+* add gap in home ([d7d8615](https://github.com/fayaadbsa/fayaadbsa.com/commit/d7d86157648a3970541fe48b77946ccfa1385510))
+* add padding ([e83b3db](https://github.com/fayaadbsa/fayaadbsa.com/commit/e83b3dbb5bc0fcaa2eda1bcc6adf198f8e705f0d))
+* add redirect route to * ([a96c94d](https://github.com/fayaadbsa/fayaadbsa.com/commit/a96c94d1f35a15edf706aafa1d53faf3029fc626))
+* add slash in static ([9044221](https://github.com/fayaadbsa/fayaadbsa.com/commit/9044221161524095a2888804ae9f86376e311a52))
+* button tag ([74c2df0](https://github.com/fayaadbsa/fayaadbsa.com/commit/74c2df03eec6ed33ad7a091485472dcdfeff7985))
+* disable menu scroll ([61cdc0f](https://github.com/fayaadbsa/fayaadbsa.com/commit/61cdc0f5f3960514560e6353a9702ea67dbf5072))
+* fix link in home ([27f19cf](https://github.com/fayaadbsa/fayaadbsa.com/commit/27f19cf695e9ca62aae67fbb5be607aa22aceff2))
+* remove duplicate project ([b00afcb](https://github.com/fayaadbsa/fayaadbsa.com/commit/b00afcb41c8e8fba4cb2bd5d880ff8e04ca61cdb))
+* remove unused code ([f0d7c6b](https://github.com/fayaadbsa/fayaadbsa.com/commit/f0d7c6bc67e056bc57a11f62689d32d3654ca260))
+* rename projectcard to projectthumbnailcard ([1501a9a](https://github.com/fayaadbsa/fayaadbsa.com/commit/1501a9a122aadbdf33ad626ec2b7b7eb814ce58e))
+
 ## [2.1.0](https://github.com/fayaadbsa/fayaadbsa.com/compare/v2.0.0...v2.1.0) (2023-07-14)
 
 
