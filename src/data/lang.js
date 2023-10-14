@@ -50,12 +50,7 @@ export const lang = {
   },
   footer: {
     developed: {
-      label: "Developed with 🧡 by",
-      name: " Fayaad",
-    },
-    designed: {
-      label: "Designed with 💛 by",
-      name: " Zalfa",
+      label: "Developed with 🧡",
     },
   },
 };
