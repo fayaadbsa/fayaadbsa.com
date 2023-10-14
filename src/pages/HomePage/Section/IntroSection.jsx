@@ -5,6 +5,11 @@ import { lang } from "@/data/lang";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
 import { useInView } from "react-intersection-observer";
+import { FaReact, FaVuejs } from "react-icons/fa";
+import { SiTailwindcss, SiDjango, SiExpress } from "react-icons/si";
+import Tag from "@/components/tag/Tag";
+import Tooltip from "@/components/tooltip/Tooltip";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 const IntroSection = () => {
   const { ref, inView, entry } = useInView({
@@ -35,10 +40,45 @@ const IntroSection = () => {
             {lang.intro.subtitle}
           </span>
         </div>
-        <div className="text-xl mt-6 text-fx-grey-light ml-0 lg:ml-20">
-          {lang.intro.description}
+        <div className="ml-0 lg:ml-20">
+          <div className="text-xl mt-4 text-fx-grey-light">
+            {lang.intro.description}
+          </div>
+          <div className="flex flex-wrap mt-4 gap-2">
+            <Tooltip content="ReactJs">
+              <Tag rounded>
+                <FaReact size={24} />
+              </Tag>
+            </Tooltip>
+            <Tooltip content="VueJs">
+              <Tag rounded>
+                <FaVuejs size={24} />
+              </Tag>
+            </Tooltip>
+            <Tooltip content="TailwindCSS">
+              <Tag rounded>
+                <SiTailwindcss size={24} />
+              </Tag>
+            </Tooltip>
+            <Tooltip content="Django">
+              <Tag rounded>
+                <SiDjango size={24} />
+              </Tag>
+            </Tooltip>
+            <Tooltip content="ExpressJs">
+              <Tag rounded>
+                <SiExpress size={24} />
+              </Tag>
+            </Tooltip>
+            <Tooltip content="PostgreSQL">
+              <Tag rounded>
+                <BiLogoPostgresql size={24} />
+              </Tag>
+            </Tooltip>
+          </div>
         </div>
-        <div className="mt-16 w-fit">
+
+        <div className="mt-10 w-fit">
           <Link to={lang.intro.resume.link} target="_blank">
             <Button>{lang.intro.resume.label}</Button>
           </Link>

@@ -1,15 +1,17 @@
 import clsx from "clsx";
 import React from "react";
 
-const Tag = ({ tag }) => {
+const Tag = ({ children, rounded = false, className }) => {
   return (
     <div
       className={clsx(
-        "inline py-1 px-3 rounded cursor-pointer whitespace-nowrap",
-        "text-fx-aqua bg-fx-aqua-dark text-sm"
+        "w-fit py-1 px-3 cursor-pointer whitespace-nowrap",
+        "text-fx-aqua bg-fx-aqua-dark text-sm",
+        rounded ? "py-3 rounded-full" : "rounded",
+        className
       )}
     >
-      {tag}
+      {children}
     </div>
   );
 };
