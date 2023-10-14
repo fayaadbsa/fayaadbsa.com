@@ -2,6 +2,8 @@ import React from "react";
 import Tags from "@/components/tag/Tags";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
+import Button from "../button/Button";
+import { BUTTON_VARIANT } from "@/utils/enum";
 
 const ProjectCard = ({ project }) => {
   const { image, imageAlt, title, slug, description, websiteUrl, tags } =
@@ -24,7 +26,9 @@ const ProjectCard = ({ project }) => {
           className="rounded-lg w-full h-50 object-cover mt-auto"
         />
       </div>
-      <div className="fx-link text-lg font-bold">{title}</div>
+      <Button className={"text-lg font-bold"} variant={BUTTON_VARIANT.LINK}>
+        {title}
+      </Button>
       <Tags tags={tags.slice(0, 2)} />
       <p
         className="text-sm text-fx-white mt-auto"

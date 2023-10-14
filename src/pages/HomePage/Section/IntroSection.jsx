@@ -17,13 +17,13 @@ const IntroSection = () => {
       ref={ref}
       className={clsx(
         "flex flex-col-reverse lg:flex-row",
-        "items-start lg:items-center justify-between",
+        "gap-16 items-start lg:items-center justify-between",
         "min-h-[60vh] transition-all duration-700",
         inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
       )}
     >
-      <div className="flex flex-col w-full lg:w-[430px]">
-        <p className="text-5xl sm:text-6xl text-fx-white self-center">
+      <div className="flex flex-col">
+        <p className="text-5xl sm:text-6xl text-fx-white">
           {lang.intro.title.greet}
           <span className="font-bold text-fx-linear-orange-yellow-aqua">
             {lang.intro.title.name}
@@ -44,9 +44,9 @@ const IntroSection = () => {
           </Link>
         </div>
       </div>
-      <div className="w-full mb-16 lg:mb-0 sm:w-[410px] self-center">
+      <div className="max-w-[410px] self-center">
         <img
-          className="rounded-tl-lg"
+          className="rounded-tl-lg w-full"
           src={ProfilePicture}
           alt={lang.intro.picture.alt}
         />

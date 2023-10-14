@@ -18,3 +18,8 @@ export const PROJECT_TYPE_ENUM = {
   COLLEGE_PERSONAL: "College Personal Project",
   COLLEGE_GROUP: "College Group Project",
 };
+
+export const BUTTON_VARIANT = {
+  PRIMARY: "PRIMARY",
+  LINK: "LINK",
+};
