@@ -4,6 +4,7 @@ import { lang } from "@/data/lang";
 import Tags from "@/components/tag/Tags";
 import Button from "@/components/button/Button";
 import { Link } from "react-router-dom";
+import { FaCalendar, FaCalendarAlt, FaRegCalendar } from "react-icons/fa";
 
 const ProjectActiveCard = ({ project }) => {
   const {
@@ -27,31 +28,22 @@ const ProjectActiveCard = ({ project }) => {
           alt={imageAlt}
         />
       </div>
-      <div className="flex flex-col gap-6 lg:mt-0">
+      <div className="flex flex-col gap-2 lg:mt-0">
         <div>
           <p className="inline font-bold text-fx-linear-orange-yellow-aqua text-3xl">
             {title}
           </p>
         </div>
-        <Tags tags={tags} />
-        <div className="font-light text-fx-grey">
+        <div className="mt-2">
+          <Tags tags={tags} />
+        </div>
+        <div className="flex items-center gap-3 font-light text-fx-grey">
+          <FaRegCalendar />
           {`${moment(startDate).format("MMMM YYYY")} - ${moment(endDate).format(
             "MMMM YYYY"
           )}`}
         </div>
-        <p
-          className="text-lg text-fx-white"
-          style={{
-            maxWidth: "100%",
-            display: "-webkit-box",
-            WebkitBoxOrient: "vertical",
-            WebkitLineClamp: 3,
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-          }}
-        >
-          {description}
-        </p>
+        <p className="text-lg text-fx-white">{description}</p>
         <div className="w-fit">
           <Link to={websiteUrl} target="_blank">
             <Button>{lang.project.button.label}</Button>

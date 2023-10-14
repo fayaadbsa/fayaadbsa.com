@@ -13,15 +13,15 @@ const Backgrounds = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <div
-        className={`absolute -z-10 -left-20 top-[30rem] opacity-70`}
+        className={`absolute -z-10 -left-[390px] md:-left-[300px] lg:-left-20 top-[30rem] opacity-70`}
         style={{ transform: `translateY(${offsetY * 0.3}px)` }}
       >
         <img src={rubik1} alt="rubik" />
       </div>
       <div
-        className={`absolute -z-10 right-12 top-[50rem] opacity-30`}
+        className={`absolute -z-10 -right-[160px] md:-right-[120px] lg:right-12 top-[50rem] opacity-30`}
         style={{ transform: `translateY(${offsetY * 0.6}px)` }}
       >
         <img src={rubik2} alt="rubik" />
@@ -32,7 +32,7 @@ const Backgrounds = () => {
       >
         <img src={rubik3} alt="rubik" />
       </div>
-    </>
+    </div>
   );
 };
 

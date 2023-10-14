@@ -16,7 +16,7 @@ const AppLayout = ({ className }) => {
   };
 
   return (
-    <div>
+    <div className="relative overflow-hidden">
       <ScrollToTop />
       <NavBar handleSidebar={handleSidebar} />
       <MobileBar isOpen={isOpen} handleSidebar={handleSidebar} />
@@ -27,10 +27,9 @@ const AppLayout = ({ className }) => {
           className
         )}
       >
-        {/* {children} */}
         <Outlet />
       </div>
-      {/* <Footer /> */}
+      <Footer />
       <Backgrounds />
     </div>
   );
