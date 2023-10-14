@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
-import { MENUS } from "@/data/menu";
-import { NavLink } from "react-router-dom";
-import clsx from "clsx";
+import Menu from "./Menu";
 
 const MobileBar = (props) => {
   const { handleSidebar, isOpen } = props;
@@ -26,22 +24,7 @@ const MobileBar = (props) => {
         <FaTimes color="white" size={32} />
       </div>
       <div className="grid grid-cols-1 grid-rows-6 gap-6 text-center">
-        {MENUS.map((item) => {
-          return (
-            <NavLink
-              to={item.path}
-              className={({ isActive }) =>
-                clsx(
-                  "flex items-center content-center justify-center text-2xl",
-                  "ease-in-out text-fx-white cursor-pointer",
-                  isActive ? "text-fx-yellow fx-neon-active" : "fx-neon-hover"
-                )
-              }
-            >
-              {item.label}
-            </NavLink>
-          );
-        })}
+        <Menu />
       </div>
     </div>
   );
