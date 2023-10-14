@@ -6,7 +6,7 @@ const Tags = ({ tags }) => {
     tags?.length > 0 && (
       <div className="flex flex-wrap gap-2">
         {tags.map((tag) => {
-          return <Tag tag={tag} />;
+          return <Tag>{tag}</Tag>;
         })}
       </div>
     )
