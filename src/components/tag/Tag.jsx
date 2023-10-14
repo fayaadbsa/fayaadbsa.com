@@ -5,7 +5,7 @@ const Tag = ({ tag }) => {
   return (
     <div
       className={clsx(
-        "inline py-1 px-3 rounded cursor-pointer",
+        "inline py-1 px-3 rounded cursor-pointer whitespace-nowrap",
         "text-fx-aqua bg-fx-aqua-dark text-sm"
       )}
     >

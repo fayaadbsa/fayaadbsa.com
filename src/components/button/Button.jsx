@@ -2,7 +2,12 @@ import clsx from "clsx";
 import React from "react";
 import { BUTTON_VARIANT } from "@/utils/enum";
 
-const Button = ({ className, variant = BUTTON_VARIANT.PRIMARY, children }) => {
+const Button = ({
+  className,
+  variant = BUTTON_VARIANT.PRIMARY,
+  hover = false,
+  children,
+}) => {
   return (
     <button
       className={clsx(
@@ -11,10 +16,11 @@ const Button = ({ className, variant = BUTTON_VARIANT.PRIMARY, children }) => {
           "text-fx-white text-lg font-medium",
         ],
         variant === BUTTON_VARIANT.LINK && [
-          "text-left text-transparent bg-clip-text",
+          "!bg-[length:200%_100%] text-left text-transparent bg-clip-text",
         ],
         "bg-gradient-to-r from-fx-orange via-fx-yellow to-fx-aqua",
-        "bg-[length:250%_100%] hover:bg-[100%_0]",
+        "bg-[length:300%_100%] hover:bg-[100%_0]",
+        hover && "bg-[100%_0]",
         "transition-all duration-500",
         className
       )}

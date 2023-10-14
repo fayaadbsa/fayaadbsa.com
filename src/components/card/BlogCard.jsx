@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaRegCalendar } from "react-icons/fa";
 import { BsClockHistory } from "react-icons/bs";
 import moment from "moment";
@@ -21,13 +21,18 @@ const BlogCard = ({ blog }) => {
     tags,
     description,
   } = blog;
+  const [hover, setHover] = useState(false);
 
   return (
-    <div
+    <Link
       key={id}
+      to={url}
+      target="_blank"
+      onMouseOver={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
       className={clsx(
         "flex flex-col gap-2 border-2 bg-fx-background border-fx-orange",
-        "basis-1/3 p-6 mt-6 rounded-lg"
+        "basis-1/3 p-6 mt-6 rounded-lg cursor-pointer"
       )}
     >
       <div className="rounded-lg -mt-12 z-10">
@@ -37,14 +42,13 @@ const BlogCard = ({ blog }) => {
           className="rounded-lg w-full h-36 object-cover mt-auto"
         />
       </div>
-      <Link to={url} target="_blank">
-        <Button
-          className={"mt-4 text-lg font-bold min-h-[56px]"}
-          variant={BUTTON_VARIANT.LINK}
-        >
-          {title}
-        </Button>
-      </Link>
+      <Button
+        className={"mt-4 text-lg font-bold min-h-[56px]"}
+        variant={BUTTON_VARIANT.LINK}
+        hover={hover}
+      >
+        {title}
+      </Button>
       <div className="inline-flex items-center text-sm text-fx-white">
         <FaRegCalendar color="#F2F2F2" className="mr-2" />
         <span>{`${moment(dateCreated).format("MMM DD, YYYY")}`}</span>
@@ -68,7 +72,7 @@ const BlogCard = ({ blog }) => {
       >
         {description}
       </p>
-    </div>
+    </Link>
   );
 };
 
