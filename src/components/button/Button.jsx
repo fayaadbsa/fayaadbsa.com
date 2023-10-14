@@ -6,12 +6,13 @@ const Button = ({ className, variant = BUTTON_VARIANT.PRIMARY, children }) => {
   return (
     <button
       className={clsx(
-        {
-          "flex items-center rounded-lg px-8 h-[60px]":
-            variant === BUTTON_VARIANT.PRIMARY,
-        },
-        { "text-fx-white text-lg font-medium": variant === BUTTON_VARIANT.PRIMARY },
-        { "text-left text-transparent bg-clip-text": variant === BUTTON_VARIANT.LINK },
+        variant === BUTTON_VARIANT.PRIMARY && [
+          "flex items-center rounded-lg px-8 h-[60px]",
+          "text-fx-white text-lg font-medium",
+        ],
+        variant === BUTTON_VARIANT.LINK && [
+          "text-left text-transparent bg-clip-text fx-link",
+        ],
         "bg-gradient-to-r from-fx-orange via-fx-yellow to-fx-aqua",
         "bg-[length:250%_100%] hover:bg-[100%_0]",
         "transition-all duration-500",
