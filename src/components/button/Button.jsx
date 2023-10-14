@@ -11,7 +11,7 @@ const Button = ({ className, variant = BUTTON_VARIANT.PRIMARY, children }) => {
           "text-fx-white text-lg font-medium",
         ],
         variant === BUTTON_VARIANT.LINK && [
-          "text-left text-transparent bg-clip-text fx-link",
+          "text-left text-transparent bg-clip-text",
         ],
         "bg-gradient-to-r from-fx-orange via-fx-yellow to-fx-aqua",
         "bg-[length:250%_100%] hover:bg-[100%_0]",
